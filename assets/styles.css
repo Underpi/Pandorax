@@ -104,7 +104,6 @@ p {
 }
 
 
-
 /* title text animation */
 #title {
   animation: fadeInAnimation ease 6s;
@@ -136,14 +135,14 @@ p {
 
 /* title under text animation */
 #btext {
-  animation: fadeIn_moveUp ease 3.4s;
+  animation: fadeIn_moveU ease 3.4s;
   animation-fill-mode: both;
   animation-delay: 2.7s;
   animation-iteration-count: 1;
   
 }
 
-@keyframes fadeIn_moveUp {
+@keyframes fadeIn_moveU {
   0% {
       opacity: 0;
       transform: translateY(0);
@@ -153,53 +152,68 @@ p {
       transform: translateY(-30px);
   }
 
-
 }
-/* end */
+
+
+
+/* on scroll*/
 #dreambig {
-  animation: fadeIn_moveUp ease 3.4s;
+  animation: fadeIn_moveU ease 3.4s;
   animation-fill-mode: both;
   animation-delay: 2.7s;
   animation-iteration-count: 1;
 }
 
 #dbt {
-  animation: fadeIn_moveUp ease 3.4s;
+  animation: fadeIn_moveU ease 3.4s;
   animation-fill-mode: both;
   animation-delay: 3.2s;
   animation-iteration-count: 1;
 }
 
 #dbi {
-  animation: fadeIn_moveUp ease 3.4s;
+  animation: fadeIn_moveU ease 3.4s;
   animation-fill-mode: both;
   animation-delay: 3.7s;
   animation-iteration-count: 1;
 }
-/*dreambigtext animation*/
 
-/* olympiadpageex1 */
 #oly {
-  animation: fadeIn_moveUp ease 3.4s;
+  animation: fadeIn_moveU ease 3.4s;
   animation-fill-mode: both;
   animation-delay: 2.7s;
   animation-iteration-count: 1;
 }
 
-/* 50 */
+
 #fif {
-  animation: fadeIn_moveUp ease 3.4s;
+  animation: fadeIn_moveU ease 3.4s;
   animation-fill-mode: both;
   animation-delay: 2.7s;
   animation-iteration-count: 1;
 }
 
 #fift {
-  animation: fadeIn_moveUp ease 3.4s;
+  animation: fadeIn_moveU ease 3.4s;
   animation-fill-mode: both;
   animation-delay: 3.2s;
   animation-iteration-count: 1;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #dbi {
   filter: brightness(30%)
@@ -248,4 +262,3 @@ nav ul {
   list-style: none;
   z-index: 9999; /* Set a higher z-index value */
 }
-
