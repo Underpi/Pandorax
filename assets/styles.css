@@ -53,8 +53,8 @@ h1 {
 }
 
 
-h2 {
-  margin-bottom: 20px;
+body {
+  font-family: 'Helvetica Neue', sans-serif;
 }
 
 h1, h2, h3, h4, h5, p {
@@ -64,7 +64,6 @@ h1, h2, h3, h4, h5, p {
 h2 {
   font-size: 1300%;
   margin-left: 7%;
-  
 }
 
 h4 {
@@ -187,3 +186,4 @@ p {
   animation-delay: 3.2s;
   animation-iteration-count: 1;
 }
+
