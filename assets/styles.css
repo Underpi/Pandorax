@@ -69,12 +69,12 @@ h1, h2, h3, h4, h5, p {
 
 h2 {
   font-size: 1300%;
-  margin-left: 7%;
+  margin-left: 20%;
 }
 
 h4 {
   font-size: 600%;
-  margin-left: 7%;
+  margin-left: 20%;
   margin-right: 5%;
 }
 
@@ -157,7 +157,7 @@ p {
 
 
 /* on scroll*/
-#dreambig {
+/* #dreambig {
   animation: fadeIn_moveU ease 3.4s;
   animation-fill-mode: both;
   animation-delay: 2.7s;
@@ -198,7 +198,7 @@ p {
   animation-fill-mode: both;
   animation-delay: 3.2s;
   animation-iteration-count: 1;
-}
+} */
 
 
 
@@ -261,4 +261,24 @@ header {
 nav ul {
   list-style: none;
   z-index: 9999; /* Set a higher z-index value */
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
