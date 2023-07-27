@@ -59,7 +59,6 @@ section {
 h1 {
   margin-top: 15%;
   margin-bottom: 10%;
-  text-align: center;
 }
 
 
@@ -102,9 +101,10 @@ p {
 }
 
 #home h1 img {
-  height: 300px;
-  width: 300px;
+  height: 25%;
+  width: 25%;
   margin: -60px;
+  display: flex;
 }
 
 
