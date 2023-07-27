@@ -264,3 +264,45 @@ p {
   border-radius: 8px;
   background: #505250;
 }
+
+/* ... Your existing styles ... */
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+  #home h1 {
+    font-size: 8vw; /* Adjust the font size for smaller screens */
+  }
+
+  #btext {
+    font-size: 4vw; /* Adjust the font size for smaller screens */
+    margin-bottom: 10%; /* Reduce the margin for smaller screens */
+  }
+
+  /* Adjust the image sizes for smaller screens */
+  #dreambigimg1, #dreambigimg2, #dreambigimg3, #dreambigimg4, #dreambigimg5 {
+    width: 30%;
+    height: auto;
+  }
+
+  /* Adjust the font size for smaller screens */
+  h2 {
+    font-size: 10vw;
+  }
+
+  /* Adjust the font size for smaller screens */
+  h4 {
+    font-size: 4vw;
+    margin-right: 2%;
+  }
+
+  /* Adjust the font size for smaller screens */
+  p {
+    font-size: 4vw;
+  }
+
+  /* Adjust the font size for smaller screens */
+  .btn {
+    font-size: 6vw;
+    margin-bottom: 5%;
+  }
+}
