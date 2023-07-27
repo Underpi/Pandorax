@@ -15,14 +15,17 @@ body {
   color: #fff;
 }
 
+
 header {
   background-color: #333;
   color: #fff;
-  padding: 10px;
+  padding: 18px; /* Increase the padding to make the nav bar thicker */
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
+  z-index: 9999; /* Set a higher z-index value */
 }
 
 nav ul {
@@ -47,6 +50,7 @@ nav a {
 nav a:hover {
   color: #f00;
 }
+
 
 section {
   padding: 50px;
@@ -247,38 +251,16 @@ p {
   background-position: right;
 }
 
-header {
-  background-color: #333;
-  color: #fff;
-  padding: 10px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 9999; /* Set a higher z-index value */
-}
 
-nav ul {
-  list-style: none;
-  z-index: 9999; /* Set a higher z-index value */
-}
 
-/* width */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
+  height: 10px;
+
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  border-radius: 8px;
+  background: #505250;
 }
