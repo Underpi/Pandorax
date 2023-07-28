@@ -72,13 +72,42 @@ h1, h2, h3, h4, h5, p {
 
 h2 {
   font-size: 850%;
-  margin-left: 7%;
+  margin-left: 20%
+}
+
+#dbt {
+  font-size: 200%;
+  margin-left: 20%; 
+  margin-right: 20%; 
+  color: #9e9e9d; 
+  margin-bottom: 50%; 
+  font-weight: bold
+}
+
+#oly {
+  font-size: 200%; 
+  margin-left: 20%; 
+  margin-right: 20%; 
+  color: #9e9e9d;
+  margin-top: 80%;
+  margin-bottom: 25%;
+  font-weight: bold
 }
 
 h4 {
   font-size: 450%;
-  margin-left: 7%;
+  margin-left: 20%;
+  margin-right: 20%;
   
+}
+
+#ptext {
+  font-size: 200%; 
+  margin-left: 20%; 
+  margin-right: 20% ;
+  color: #9e9e9d; 
+  margin-bottom: 20%; 
+  font-weight: bold
 }
 
 p {
@@ -219,7 +248,7 @@ p {
 
 
 #dbi {
-  filter: brightness(30%)
+  filter: brightness(70%)
 }
 
 /* get started button */
