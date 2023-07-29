@@ -50,6 +50,7 @@ nav a:hover {
   color: #f00;
 }
 
+
 /* 
 section {
   padding: 50px;
@@ -133,6 +134,12 @@ p {
   height: 15%;
   width: 15%;
   margin: -3%
+}
+
+#btext {
+  text-align: center; 
+  font-size: 150%; 
+  margin-bottom: 25%
 }
 
 
@@ -298,12 +305,13 @@ p {
 /* Mobile Styles */
 @media screen and (max-width: 768px) {
   #home h1 {
-    font-size: 8vw; /* Adjust the font size for smaller screens */
+    margin-top: 30vmin;
+    font-size: 18vw; /* Adjust the font size for smaller screens */
   }
 
   #btext {
-    font-size: 4vw; /* Adjust the font size for smaller screens */
-    margin-bottom: 10%; /* Reduce the margin for smaller screens */
+    font-size: 100%; /* Adjust the font size for smaller screens */
+    margin-bottom: 30%; /* Reduce the margin for smaller screens */
   }
 
   /* Adjust the image sizes for smaller screens */
