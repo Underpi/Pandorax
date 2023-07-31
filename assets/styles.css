@@ -145,9 +145,9 @@ p {
 
 /* title text animation */
 #title {
-  animation: fadeInAnimation ease 6s;
+  animation: fadeInAnimation ease 3s;
   animation-fill-mode: both;
-  animation-delay: 1.3s;
+  animation-delay: 0.65s;
   animation-iteration-count: 1;
 }
 
@@ -174,9 +174,9 @@ p {
 
 /* title under text animation */
 #btext {
-  animation: fadeIn_moveU ease 3.4s;
+  animation: fadeIn_moveU ease 1.7s;
   animation-fill-mode: both;
-  animation-delay: 2.7s;
+  animation-delay: 1.35s;
   animation-iteration-count: 1;
   
 }
