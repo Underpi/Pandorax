@@ -111,7 +111,7 @@ h2 {
 
 .oly {
   font-size: 160%; 
-  padding-inline: 23vw;
+  padding-inline: 20vw;
   color: #9e9e9d;
   padding-block: 40vh;
   font-weight: 500;
@@ -119,14 +119,14 @@ h2 {
 
 h4 {
   font-size: 270%;
-  padding-inline: 23vw;
+  padding-inline: 20vw;
   padding-bottom: 1.5%;
   font-weight: 600;
 }
 
 #ptext {
   font-size: 160%; 
-  padding-inline: 23vw;
+  padding-inline: 20vw;
   color: #9e9e9d; 
   padding-bottom: 40vh; 
   font-weight: 500;
