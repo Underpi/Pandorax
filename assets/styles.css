@@ -66,9 +66,8 @@ nav a:hover {
 }
 
 #home h1 img {
-  height: 15%;
-  width: 15%;
-  margin: -3%
+  height: 17%;
+  width: 17%;
 }
 
 #btext {
@@ -105,14 +104,14 @@ h2 {
 #dbt {
   font-size: 160%;
   justify-content: center;
-  padding-inline: 27vw;
+  padding-inline: 23vw;
   color: #9e9e9d; 
   font-weight: 500;
 }
 
 .oly {
   font-size: 160%; 
-  padding-inline: 27vw;
+  padding-inline: 23vw;
   color: #9e9e9d;
   padding-block: 40vh;
   font-weight: 500;
@@ -120,14 +119,14 @@ h2 {
 
 h4 {
   font-size: 270%;
-  padding-inline: 27vw;
+  padding-inline: 23vw;
   padding-bottom: 1.5%;
   font-weight: 600;
 }
 
 #ptext {
   font-size: 160%; 
-  padding-inline: 27vw;
+  padding-inline: 23vw;
   color: #9e9e9d; 
   padding-bottom: 40vh; 
   font-weight: 500;
