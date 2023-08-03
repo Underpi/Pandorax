@@ -52,14 +52,39 @@ nav a:hover {
 }
 
 
+#home {
+  text-align: center;
+}
+
+#home h1 {
+  font-family: Helvetica;
+  font-size: 1000%;
+  color:#fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#home h1 img {
+  height: 15%;
+  width: 15%;
+  margin: -3%
+}
+
+#btext {
+  text-align: center; 
+  font-size: 150%; 
+  padding-bottom: 25%
+}
+
+
 /* 
 section {
   padding: 50px;
 } */
 
 h1 {
-  margin-top: 20%;
-  margin-bottom: 10%;
+  padding-block: 40vh 20vh;
   text-align: center;
 }
 
@@ -74,10 +99,7 @@ h1, h2, h3, h4, h5, p {
 
 h2 {
   font-size: 850%;
-  padding-left: 27%;
-  padding-right: 27%;
   font-weight: 600;
-  white-space: nowrap;
 }
 
 #dbt {
@@ -88,30 +110,26 @@ h2 {
   font-weight: 500;
 }
 
-#oly {
+.oly {
   font-size: 160%; 
-  padding-left: 27%;
-  padding-right: 27%; 
+  padding-inline: 27vw;
   color: #9e9e9d;
-  padding-top: 50%;
-  padding-bottom: 25%;
+  padding-block: 40vh;
   font-weight: 500;
 }
 
 h4 {
   font-size: 270%;
-  padding-left: 27%;
-  padding-right: 27%;
+  padding-inline: 27vw;
   padding-bottom: 1.5%;
   font-weight: 600;
 }
 
 #ptext {
   font-size: 160%; 
-  padding-left: 27%;
-  padding-right: 27%;
+  padding-inline: 27vw;
   color: #9e9e9d; 
-  padding-bottom: 20%; 
+  padding-bottom: 40vh; 
   font-weight: 500;
 }
 
@@ -137,30 +155,7 @@ p {
 
 
 
-#home {
-  text-align: center;
-}
 
-#home h1 {
-  font-family: Helvetica;
-  font-size: 1000%;
-  color:#fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#home h1 img {
-  height: 15%;
-  width: 15%;
-  margin: -3%
-}
-
-#btext {
-  text-align: center; 
-  font-size: 150%; 
-  padding-bottom: 25%
-}
 
 
 /* title text animation */
@@ -282,12 +277,13 @@ p {
 #container {
   text-align: center;
   outline: none;
+  padding-block: 5vh 10vh
 }
 
 
 .btn {
-  margin-top: 2%;
-  margin-bottom: 13%;
+  padding-top: 2%;
+  padding-bottom: 13%;
   padding: 15px 28px;
   border-radius: 16px;
   font-size: xx-large;
