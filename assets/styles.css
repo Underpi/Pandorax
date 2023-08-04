@@ -4,14 +4,22 @@
   box-sizing: border-box;
 }
 
-body {
+/* body {
   overflow-x: hidden; 
-}
+} */
 
 
 body {
   background-color: #000;
   color: #fff;
+}
+
+body {
+  overflow-x: hidden !important;
+}
+.container2 {
+  max-width: 100% !important;
+  overflow-x: hidden !important;
 }
 
 
@@ -83,7 +91,7 @@ section {
 } */
 
 h1 {
-  padding-block: 40vh 20vh;
+  padding-block: 30vh 20vh;
   text-align: center;
 }
 
@@ -116,7 +124,7 @@ h2 {
   font-weight: 500;
 }
 
-#olyt {
+.oly {
   font-size: 160%; 
   padding-inline: 20vw;
   color: #9e9e9d;
