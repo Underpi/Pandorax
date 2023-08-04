@@ -88,6 +88,13 @@ h1 {
 }
 
 
+#aa, #es, #b {
+  height: 387px;
+  width: 323px;
+  margin-bottom: 40vh;
+}
+
+
 body {
   font-family: 'Poppins', sans-serif;
 }
@@ -109,11 +116,11 @@ h2 {
   font-weight: 500;
 }
 
-.oly {
+#olyt {
   font-size: 160%; 
   padding-inline: 20vw;
   color: #9e9e9d;
-  padding-block: 40vh;
+  padding-top: 40vh;
   font-weight: 500;
 }
 
