@@ -65,23 +65,20 @@ nav a:hover {
 }
 
 #home h1 {
-  font-family: Helvetica;
-  font-size: 1000%;
-  color:#fff;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-#home h1 img {
-  height: 17%;
-  width: 17%;
+h1 img {
+  height: auto;
+  width: 1031px;
 }
 
 #btext {
   text-align: center; 
   font-size: 150%; 
-  padding-bottom: 25%
+  padding-bottom: 55vh;
 }
 
 
@@ -91,8 +88,7 @@ section {
 } */
 
 h1 {
-  padding-block: 30vh 20vh;
-  text-align: center;
+  padding-block:8vh 2vh;
 }
 
 
@@ -190,11 +186,6 @@ p {
 }
 /* end */
 
-/* logo animation */
-#logo {
-  animation: fadeInAnimation ease 3s;
-  animation-iteration-count: 1;
-}
 
 
 
