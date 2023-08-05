@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pandorax</title>
+    <link rel="stylesheet" href="assets/programs.css">
+    <link rel="icon" href="assets/webstuff/pandoraxO">
+    <style>
+      @import url('https://fonts.cdnfonts.com/css/poppins');
+    </style>
+</head>
+<body>
+    <header >
+        <div class="crazy">
+            <a href="index.html"><img id="logo" src="assets/webstuff/ptitle.png" /></a>
+        </div>
+        <div class="head">
+            <a href="products"><button id="prod">Products</button></a>
+            <a href="programs.html"><button id="prog">Programs</button></a>
+            <a href="team.html"><button id="te">Our Team</button></a>
+            <a href="contact.html"><button id="cont">Contact</button></a>
+        </div>
+    </header>
+    
+    
+    
+    
+    
+    
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+  var progButton = document.getElementById('prog');
+
+  // Function to check if the current page is "products.html"
+  function isOnProductsPage() {
+    return window.location.pathname.endsWith('programs.html');
+  }
+
+  // Apply the style on initial page load
+  if (isOnProductsPage()) {
+    progButton.style.borderBottom = '1px solid #fff';
+  }
+});
+</script>
+<script src="assets/script.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>    
+</body>
+</html>
