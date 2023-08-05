@@ -302,6 +302,7 @@ p {
   cursor: pointer;
   color: #fff;
   background-image: linear-gradient(241deg, #189FFD, #AE63E8);
+  border: none;
 }
 
 @keyframes btn {
