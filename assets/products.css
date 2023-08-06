@@ -9,6 +9,7 @@ body {
     background-color: #000;
     color: #fff;
     font-family: 'Poppins', sans-serif;
+    background-image: url("titleb.png");
   }
 
 .crazy {
@@ -39,8 +40,6 @@ body {
     cursor: pointer;
 }
 
-  
-
 .head {
     display: flex; 
     justify-content: center;
@@ -48,4 +47,34 @@ body {
     align-items: under;
     justify-content: space-between 4px;
     gap: 3px;
+}
+
+.programstop {
+    display: flex; 
+    justify-content: center;
+    flex-direction: column;
+    padding-right: 22vw;
+    padding-bottom: 5vh;
+    padding-top: 10vh;
+    font-size: 140%;
+    padding-left: 22vw;
+}
+
+
+.title {
+    display: flex; 
+    justify-content: center;
+    flex-direction: row;
+    padding-bottom: 0vh;
+    font-size: 140%;
+    gap: 14vw;
+}
+
+.stats {
+    display: flex; 
+    justify-content: center;
+    flex-direction: row;
+    padding-bottom: 20vh;
+    font-size: 400%;
+    gap: 7vw
 }

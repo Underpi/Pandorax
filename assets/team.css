@@ -6,10 +6,17 @@
 
   
 body {
-    background-color: #000;
+    background-image: url('titleb.png');
     color: #fff;
     font-family: 'Poppins', sans-serif;
   }
+
+  /* body {
+  background-image: url('titleb.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+} */
 
 .crazy {
     display: flex; 
