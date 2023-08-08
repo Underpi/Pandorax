@@ -9,7 +9,7 @@ body {
     background-color: #000;
     color: #fff;
     font-family: 'Poppins', sans-serif;
-    background-image: url("titleb.png");
+
   }
 
 .crazy {
@@ -53,11 +53,10 @@ body {
     display: flex; 
     justify-content: center;
     flex-direction: column;
-    padding-right: 22vw;
+    padding-inline: 21vw;
     padding-bottom: 5vh;
     padding-top: 10vh;
     font-size: 140%;
-    padding-left: 22vw;
 }
 
 
