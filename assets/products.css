@@ -49,13 +49,18 @@ body {
     gap: 3px;
 }
 
+.top {
+    background-image: url("webstuff/productsb.png");
+    background-position: 70% 50%;
+}
+
 .programstop {
     display: flex; 
     justify-content: center;
     flex-direction: column;
     padding-inline: 21vw;
     padding-bottom: 5vh;
-    padding-top: 10vh;
+    padding-top: 20vh;
     font-size: 140%;
 }
 
@@ -73,7 +78,7 @@ body {
     display: flex; 
     justify-content: center;
     flex-direction: row;
-    padding-bottom: 25vh;
+    padding-bottom: 20vh;
     font-size: 400%;
     gap: 7vw
 }
@@ -84,6 +89,9 @@ body {
     display: flex; 
     align-items: center;
     flex-direction: column;
+    background-image: url("webstuff/usabobg.jpg");
+    background-size: 95% auto;
+    background-position: center;
 }
 
 #usabob {
@@ -120,6 +128,9 @@ body {
     display: flex; 
     align-items: center;
     flex-direction: column;
+    background-image: url("webstuff/seeksobg.png");
+    background-size: 150% auto;
+    background-position: center;
 }
 
 #seeksop {
@@ -155,6 +166,9 @@ body {
     display: flex; 
     align-items: center;
     flex-direction: column;
+    background-image: url("webstuff/calcpbg.png");
+    background-size: 120%;
+    background-position: center;
 }
 
 #calcpop {
@@ -190,6 +204,9 @@ body {
     display: flex; 
     align-items: center;
     flex-direction: column;
+    background-image: url("webstuff/usabg.jpg");
+    background-size: 120%;
+    background-position: center;
 }
 
 #usa {
@@ -225,6 +242,9 @@ body {
     display: flex; 
     align-items: center;
     flex-direction: column;
+    background-image: url("webstuff/usesobg.png");
+    background-size: 95% auto;
+    background-position: center;
 }
 
 #usesop {
