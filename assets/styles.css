@@ -15,6 +15,7 @@ body {
   
 body {
   overflow-x: hidden !important;
+  overflow-y: hidden
 }
 .container2 {
   max-width: 100% !important;
@@ -63,6 +64,20 @@ nav a:hover {
   color: #f00;
 }
 
+
+#home-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("webstuff/titleb.png");
+  background-position: center;
+  background-size: cover;
+  opacity: 1; /* Initial opacity */
+  z-index: -1;
+  transition: opacity 0.3s ease; /* Transition for fading effect */
+}
 
 #home {
   text-align: center;
@@ -128,7 +143,7 @@ h2 {
   font-size: 160%; 
   padding-inline: 20vw;
   color: #bec2bf;
-  padding-top: 40vh;
+  padding-top: 60vh;
   font-weight: 500;
 }
 
@@ -320,18 +335,15 @@ p {
   animation-fill-mode: forwards;
 }
 
-
-
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 10px;
-
+  width: 0;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
 }
-
-
+/* Optional: show position indicator in red */
 ::-webkit-scrollbar-thumb {
-  border-radius: 8px;
-  background: #505250;
+  background: #FF0000;
 }
-
-/* ... Your existing styles ... */

@@ -129,7 +129,7 @@ body {
     align-items: center;
     flex-direction: column;
     background-image: url("webstuff/seeksobg.png");
-    background-size: 150% auto;
+    background-size: 170% auto;
     background-position: center;
 }
 
@@ -167,7 +167,7 @@ body {
     align-items: center;
     flex-direction: column;
     background-image: url("webstuff/calcpbg.png");
-    background-size: 120%;
+    background-size: 150%;
     background-position: center;
 }
 
@@ -286,3 +286,16 @@ body {
     border-radius: 8px;
     background: #505250;
 }
+
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+  ::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+  }
+  /* Optional: show position indicator in red */
+  ::-webkit-scrollbar-thumb {
+    background: #FF0000;
+  }
