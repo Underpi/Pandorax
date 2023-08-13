@@ -165,7 +165,7 @@ h4 {
   font-size: 160%; 
   padding-inline: 20vw;
   color: #bec2bf; 
-  padding-bottom: 90vh; 
+  padding-bottom: 100vh; 
   font-weight: 500;
 }
 
@@ -241,60 +241,6 @@ p {
 
 
 
-/* on scroll*/
-/* #dreambig {
-  animation: fadeIn_moveU ease 3.4s;
-  animation-fill-mode: both;
-  animation-delay: 2.7s;
-  animation-iteration-count: 1;
-}
-
-#dbt {
-  animation: fadeIn_moveU ease 3.4s;
-  animation-fill-mode: both;
-  animation-delay: 3.2s;
-  animation-iteration-count: 1;
-}
-
-#dbi {
-  animation: fadeIn_moveU ease 3.4s;
-  animation-fill-mode: both;
-  animation-delay: 3.7s;
-  animation-iteration-count: 1;
-}
-
-#oly {
-  animation: fadeIn_moveU ease 3.4s;
-  animation-fill-mode: both;
-  animation-delay: 2.7s;
-  animation-iteration-count: 1;
-}
-
-
-#fif {
-  animation: fadeIn_moveU ease 3.4s;
-  animation-fill-mode: both;
-  animation-delay: 2.7s;
-  animation-iteration-count: 1;
-}
-
-#fift {
-  animation: fadeIn_moveU ease 3.4s;
-  animation-fill-mode: both;
-  animation-delay: 3.2s;
-  animation-iteration-count: 1;
-} */
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -314,6 +260,7 @@ p {
 
 .btn {
   padding-bottom: 13%;
+  margin-bottom: 25vh;
   padding: 15px 28px;
   border-radius: 16px;
   font-size: xx-large;
