@@ -24,10 +24,11 @@
         </div>
     </header>
     
-    <div class="top">
-      <section class="programstop">
+    <section class="top">
+      <div class="background"></div>
+      <div class="content">
         <p>At Pandorax, our team of experts developed 800+ pages of content for the Earth Science, Astronomy and Astrophysics, Biology, and Physics Olympiads. Collectively known as the Olympiad Guides, these resources instill interest and knowledge of the collegiate-level sciences in any curious dreamer and are an excellent preparation tool for international science Olympiad competitions. Pandorax also operates Seekso.org, an AI search engine with a unique helpful filter for student researchers and professionals. Tens of thousands of users have used our products to achieve their dreams. </p>
-      </section>
+      </div>
     
       <section class="title" data-aos="fade-in" data-aos-once="true" data-aos="zoom-in" data-aos-easing="ease-in">
         <p>Total Users</p>
@@ -40,38 +41,48 @@
         <p>54,000+</p>
         <p>13+</p>
       </section>
-    </div>
-    
-    <section class="usabo">
-      <h1 style="font-size: 700%; font-weight: 600">USABO Guide</h1>
-      <p style="font-size: 140%;">Guiding your interest and success for the Biology Olympiad, and beyond.</p>
-      <a href="https://usabo.guide"><button id="usabob">Learn More</button></a>
     </section>
-   
-    <section class="calcp" >
-      <h2 style="font-size: 700%; font-weight: 600">Calculus Primer</h2>
-      <p style="font-size: 140%;">Master the fundamental knowledge for the Physics Olympiad and beyond.</p>
-      <a href="https://usabo.guide"><button id="calcpop">Learn More</button></a>
+    
+    <section class="parallax usabo">
+      <section class="usabo-content">
+        <h1 style="font-size: 700%; font-weight: 600">USABO Guide</h1>
+        <p style="font-size: 140%;">Guiding your interest and success for the Biology Olympiad, and beyond.</p>
+        <a href="https://usabo.guide"><button id="usabob">Learn More</button></a>
+      </section>
     </section>
 
-    <section class="usaaao">
-      <h3 style="font-size: 700%; font-weight: 600">USAAAO Guide</h3>
-      <p style="font-size: 140%;">Guiding your interest and success for the Astrophysics Olympiad, and beyond.</p>
-      <a href="https://usaaao.guide"><button id="usa">Learn More</button></a>
-    </section>
-    
-    <section class="useso">
-      <h4 style="font-size: 700%; font-weight: 600">USESO Guide</h4>
-      <P style="font-size: 140%;">Guiding your interest and success for the Earth Science Olympiad, and beyond.</P>
-      <a href="https://useso.guide"><button id="usesop">Learn More</button></a>
-    </section>
-    
-    <section class="seekso">
-      <h5 style="font-size: 700%; font-weight: 600">Seekso.org</h5>
-      <p style="font-size: 140%;">The Smart Search Engine made for students, by students.</p>
-      <a href="https://seekso.org"><button id="seeksop">Learn More</button></a>
-    </section>
-    
+    <div class="parallax calcp">
+      <section class="calcp-content" >
+        <h2 style="font-size: 700%; font-weight: 600">Calculus Primer</h2>
+        <p style="font-size: 140%;">Master the fundamental knowledge for the Physics Olympiad and beyond.</p>
+        <a href="https://usabo.guide"><button id="calcpop">Learn More</button></a>
+      </section>
+    </div>
+
+    <div class="parallax usaaao">
+      <section class="usaaao-content">
+        <h3 style="font-size: 700%; font-weight: 600">USAAAO Guide</h3>
+        <p style="font-size: 140%;">Guiding your interest and success for the Astrophysics Olympiad, and beyond.</p>
+        <a href="https://usaaao.guide"><button id="usa">Learn More</button></a>
+      </section>
+    </div>
+
+    <div class="parallax useso">  
+      <section class="useso-content">
+        <h4 style="font-size: 700%; font-weight: 600">USESO Guide</h4>
+        <P style="font-size: 140%;">Guiding your interest and success for the Earth Science Olympiad, and beyond.</P>
+        <a href="https://useso.guide"><button id="usesop">Learn More</button></a>
+      </section>
+    </div>
+
+    <div class="parallax seekso">
+      <section class="seekso-content">
+        <h5 style="font-size: 700%; font-weight: 600">Seekso.org</h5>
+        <p style="font-size: 140%;">The Smart Search Engine made for students, by students.</p>
+        <a href="https://seekso.org"><button id="seeksop">Learn More</button></a>
+      </section>
+    </div>
+      
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -87,6 +98,36 @@
     prodButton.style.borderBottom = '1px solid #fff';
   }
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const parallaxSections = document.querySelectorAll('.parallax');
+
+    window.addEventListener('scroll', function () {
+        parallaxSections.forEach(section => {
+            const scrollPosition = window.pageYOffset;
+            const sectionOffset = section.offsetTop;
+            const sectionSpeed = 0.8; // Adjust the speed as needed\
+            const maxScroll = 100; // Adjust the maximum scroll offset where the background stops
+
+
+            section.style.backgroundPositionY = (scrollPosition - sectionOffset) * sectionSpeed + 'px';
+        });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const backgroundElement = document.querySelector('.background');
+    const windowHeight = window.innerHeight;
+
+    window.addEventListener('scroll', function () {
+        const scrollPosition = window.pageYOffset;
+        const opacity = 1 - (scrollPosition / (0.8 * windowHeight)); // Adjust divisor as needed
+
+        backgroundElement.style.opacity = opacity;
+    });
+});
+
+
 </script>
 <script src="assets/script.js"></script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

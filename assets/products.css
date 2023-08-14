@@ -51,11 +51,23 @@ body {
 
 
 .top {
-    background-image: url("webstuff/productsb.png");
-    background-position: 70% 50%;
+    position: relative;
 }
 
-.programstop {
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("webstuff/productsb.png");
+    background-position: 70% 50%;
+    opacity: 1;
+    z-index: -999;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.content {
     display: flex; 
     justify-content: center;
     flex-direction: column;
@@ -63,6 +75,7 @@ body {
     padding-bottom: 5vh;
     padding-top: 20vh;
     font-size: 140%;
+    opacity: 1;
 }
 
 
@@ -85,14 +98,36 @@ body {
 }
 
 
-.usabo {
-    padding-block: 40vh; 
-    display: flex; 
-    align-items: center;
-    flex-direction: column;
-    background-image: url("webstuff/usabobg.jpg");
-    background-size: 95% auto;
+.parallax {
+    position: relative;
+    height: 100vh; /* Adjust the height as needed */
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
+}
+
+.usabo-content,
+.calcp-content,
+.usaaao-content,
+.useso-content,
+.seekso-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2; /* Bring the text content above the background */
+    color: #fff; /* Set the text color */
+    white-space: nowrap;
+}
+
+.usabo {
+    background-image: url('webstuff/usabobg.jpg'); /* Update with your image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: scale(1)
 }
 
 #usabob {
@@ -124,14 +159,11 @@ body {
 }
 
 .seekso {
-    padding-top: 40vh; 
-    padding-bottom: 40vh;
-    display: flex; 
-    align-items: center;
-    flex-direction: column;
-    background-image: url("webstuff/seeksobg.png");
-    background-size: 170% auto;
+    background-image: url('webstuff/seeksobg.png'); /* Update with your image */
+    background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
+    transform: scale(1)
 }
 
 #seeksop {
@@ -162,15 +194,15 @@ body {
     }
 }
 
+
 .calcp {
-    padding-block: 40vh; 
-    display: flex; 
-    align-items: center;
-    flex-direction: column;
-    background-image: url("webstuff/calcpbg.png");
-    background-size: 150%;
+    background-image: url('webstuff/calcpbg.png'); /* Update with your image */
+    background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
+    transform: scale(1)
 }
+
 
 #calcpop {
     color: #000;
@@ -201,13 +233,11 @@ body {
 }
 
 .usaaao {
-    padding-block: 40vh; 
-    display: flex; 
-    align-items: center;
-    flex-direction: column;
-    background-image: url("webstuff/usabg.jpg");
-    background-size: 120%;
+    background-image: url('webstuff/usabg.jpg'); /* Update with your image */
+    background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
+    transform: scale(1)
 }
 
 #usa {
@@ -239,13 +269,11 @@ body {
 }
 
 .useso {
-    padding-block: 40vh; 
-    display: flex; 
-    align-items: center;
-    flex-direction: column;
-    background-image: url("webstuff/usesobg.png");
-    background-size: 95% auto;
-    background-position: center;
+    background-image: url('webstuff/usesobg.png'); /* Update with your image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-color:  #040815;
 }
 
 #usesop {
