@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     window.addEventListener('scroll', function () {
         parallaxSections.forEach(section => {
-            const scrollPosition = window.pageYOffset;
+            const scrollPosition = window.pageYOffset+20;
             const sectionOffset = section.offsetTop;
             
             // Adjust the section speed as needed
@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 maxScroll = 100;
             }
 
-            section.style.backgroundPositionY = (scrollPosition - sectionOffset) * sectionSpeed + 'px';
+            section.style.backgroundPositionY = (scrollPosition-320 - sectionOffset) * sectionSpeed + 'px';
         });
     });
 });

@@ -198,8 +198,8 @@ body {
     background-image: url('webstuff/calcpbg.png'); /* Update with your image */
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
-    transform: scale(1)
+    transform: scale(1);
+    filter: brightness(80%) 
 }
 
 
