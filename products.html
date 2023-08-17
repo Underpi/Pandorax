@@ -117,6 +117,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 sectionSpeed = 0.7; // Adjust this value for the desired effect
                 maxScroll = 100;
             }
+           else if (section.classList.contains('calcp')) {
+                const adjustedStartPosition = sectionOffset +10; // Adjust the value as needed
+                section.style.backgroundPositionY = (scrollPosition - adjustedStartPosition) * sectionSpeed + 'px';
+                return; // Skip the rest of the calculations for this section          
+              }
 
             section.style.backgroundPositionY = (scrollPosition-313 - sectionOffset) * sectionSpeed + 'px';
         });
