@@ -57,6 +57,100 @@
     gap: 3px;
 }
 
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("webstuff/ourteambg.png");
+  background-position: 60% 50%;
+  opacity: 1;
+  z-index: -999;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.content {
+  display: flex; 
+  justify-content: center;
+  flex-direction: column;
+  padding-inline: 26vw;
+  padding-bottom: 5vh;
+  padding-block: 20vh;
+  font-size: 130%;
+  opacity: 1;
+}
+
+.title {
+  display: flex; 
+  justify-content: center;
+}
+
+h1 {
+  font-size: 385%;
+  padding-top: 20vh;
+  padding-bottom: 5vh;
+  font-weight: 600;
+}
+
+.executive {
+  display: flex;
+  gap: 60px; /* Add gap between profile cards */
+  flex-wrap: wrap;
+  padding-inline: 6vw;
+  justify-content: flex-start;
+}
+
+.profile-card {
+  background-color: #363636;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 761.4px;
+  width: 403px; 
+  margin-bottom: 200px;  /* commentable */
+}
+
+.profile-card img {
+  width: 403px;
+  height: 397px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.profile-details h2,
+.profile-details p {
+  padding-inline: 30px;
+
+}
+
+.profile-details h2 {
+  margin-bottom: 30px;
+}
+
+/* Style all font awesome icons */
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: #333; /* Adjust icon color */
+  font-size: 20px; /* Adjust icon size */
+  transition: color 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+
+
+
+
+
 html {
     overflow: scroll;
     overflow-x: hidden;
