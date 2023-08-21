@@ -96,10 +96,10 @@ h1 {
 
 .executive {
   display: flex;
-  gap: 60px; /* Add gap between profile cards */
+  gap: 60px; 
   flex-wrap: wrap;
   padding-inline: 6vw;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .profile-card {
@@ -109,7 +109,7 @@ h1 {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   height: 761.4px;
   width: 403px; 
-  margin-bottom: 200px;  /* commentable */
+  margin-bottom: 200px;  
 }
 
 .profile-card img {
@@ -129,7 +129,7 @@ h1 {
   margin-bottom: 30px;
 }
 
-/* Style all font awesome icons */
+
 .social-icons {
   display: flex;
   gap: 10px;
@@ -137,13 +137,13 @@ h1 {
 }
 
 .social-icons a {
-  color: #333; /* Adjust icon color */
-  font-size: 20px; /* Adjust icon size */
+  color: #000; 
+  font-size: 20px; 
   transition: color 0.3s ease-in-out;
 }
 
 .social-icons a:hover {
-  color: #007bff; /* Change color on hover */
+  color: #000; 
 }
 
 
@@ -156,10 +156,9 @@ html {
     overflow-x: hidden;
   }
   ::-webkit-scrollbar {
-    width: 0;  /* Remove scrollbar space */
-    background: transparent;  /* Optional: just make scrollbar invisible */
+    width: 0;  
+    background: transparent;  
   }
-  /* Optional: show position indicator in red */
   ::-webkit-scrollbar-thumb {
     background: #FF0000;
   }
