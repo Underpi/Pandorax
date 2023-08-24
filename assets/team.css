@@ -113,15 +113,18 @@ h1 {
 
 .writers {
   display: flex;
-  gap: 60px; 
   flex-wrap: wrap;
-  padding-inline: 6vw;
+  gap: 60px;
   justify-content: center;
+  padding-inline: 6vw;
 }
 
 .bottomprof {
   display: flex;
   align-items: center;
+  flex-direction: row; /* Center-align text */
+  width: calc(33.33% - 40px); /* Adjusted width to fit 3 per row with gaps */
+  margin-bottom: 40px;
 }
 
 .bottomprof img {
