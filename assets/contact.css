@@ -39,7 +39,21 @@ body {
     cursor: pointer;
 }
 
+
+.cool {
+  display: flex;
+  justify-content: center;
+  padding-top: 10vh;
+  font-size: 120%;
+  padding-inline: 60vh;
+}
   
+
+.form {
+  margin-top: 5vh;
+  display: flex;
+  justify-content: center;
+}
 
 .head {
     display: flex; 
