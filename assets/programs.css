@@ -126,6 +126,28 @@ p {
     border-radius: 18px;
 }
 
+.usapho {
+    border-width:4px; 
+    border-style:solid; 
+    padding-inline: 2vw;
+    padding-block: 1vw;
+    margin-inline: 18vw;
+    border-color:#f6b26b;
+    background-color: #342617;
+    border-radius: 18px;
+}
+
+.usnco {
+    border-width:4px; 
+    border-style:solid; 
+    padding-inline: 2vw;
+    padding-block: 1vw;
+    margin-inline: 18vw;
+    border-color:#b8f890;
+    background-color: #27351e;
+    border-radius: 18px;
+}
+
 .ml {
     border-width:4px; 
     border-style:solid; 
