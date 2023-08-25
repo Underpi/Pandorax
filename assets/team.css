@@ -105,7 +105,7 @@ h1 {
 
 .executive {
   display: flex;
-  gap: 60px; 
+  gap: 40px; 
   flex-wrap: wrap;
   padding-inline: 6vw;
   justify-content: center;
