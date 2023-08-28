@@ -301,3 +301,55 @@ html {
 ::-webkit-scrollbar-thumb {
   background: #FF0000;
 }
+
+  /* Your existing styles */
+
+  /* Media query for phones with a maximum width of 768px */
+  @media only screen and (max-width: 768px) {
+    body {
+      font-size: 10px; /* Adjust the font size for better readability on small screens */    }
+
+    /* Additional responsive styling for specific elements */
+    /* For example: */
+    #title {
+      margin-top: 150px;
+      width: 90%/* Adjust the title font size for phones */
+    }
+
+    /* dream big */
+
+    #dreambig {
+      font-size: 60px
+    }
+    
+    #dbt {
+      font-size: 12px;
+      padding-inline: 30px;
+
+    }
+
+
+    /* oly */
+    #wowza {
+      font-size: 15px;
+      padding-inline: 2px;
+    }
+
+   
+
+    #aa, #es, #b, #c {
+      height: 187px;
+      width: auto;
+      margin-bottom: 40vh;
+    }
+
+    
+
+ 
+    /* Add more responsive styles as needed */
+  }
+
+
+
+
+
