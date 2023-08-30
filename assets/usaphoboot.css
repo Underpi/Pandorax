@@ -22,7 +22,7 @@ header {
 
 #logo {
     margin-top: -6vh;
-    width: 400px;
+    width: 300px;
     height: auto;
     margin-bottom: -8vh;
 }
@@ -68,7 +68,7 @@ h1 {
 .description {
     font-size: 90%;
     border-radius: 15px;
-    background-color: #f89023   ;
+    background-color: #58340A   ;
     padding: 2vw;
     margin-inline: 25vw
 }
