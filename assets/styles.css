@@ -25,7 +25,8 @@ body {
 
 #pplimg {
   opacity: 50%;
-  width: 90vw
+  width: 90vw;
+  transform: translateY(-35vh);
 }
 
 /* body {
@@ -188,6 +189,37 @@ p {
 
 
 
+.card-container {
+  display: flex;
+  flex-direction: row; /* Display cards in a row for larger screens */
+  justify-content: center;
+  margin-bottom: 5vh;
+}
+
+
+#dreambigimg4 {
+  height: 442px; 
+  width: 442px; 
+  transform: translate(6vw, -24vh)
+}
+
+#dreambigimg3 {
+  height: 600px; 
+  width: 600px; 
+  transform: translate(0vw, -2vw)
+}
+
+#dreambigimg2 {
+  height: 550px; 
+  width: 550px; 
+  transform: translate(-1vw, 30vh)
+}
+
+#dreambigimg5 {
+  height: 500px; 
+  width: 500px; 
+  transform: translate(-10vw, -22vh)
+}
 
 
 
@@ -195,7 +227,7 @@ p {
 
 
 /* title text animation */
-#title {
+/* #title {
   animation: fadeInAnimation ease 3s;
   animation-fill-mode: both;
   animation-delay: 0.65s;
@@ -209,7 +241,7 @@ p {
   100% {
       opacity: 1;
   }
-}
+} */
 /* end */
 
 
@@ -219,7 +251,7 @@ p {
 /* end */
 
 /* title under text animation */
-#btext {
+/* #btext {
   animation: fadeIn_moveU ease 1.7s;
   animation-fill-mode: both;
   animation-delay: 1.35s;
@@ -237,7 +269,7 @@ p {
       transform: translateY(-30px);
   }
 
-}
+} */
 
 
 
@@ -307,13 +339,18 @@ html {
   /* Media query for phones with a maximum width of 768px */
   @media only screen and (max-width: 768px) {
     body {
-      font-size: 10px; /* Adjust the font size for better readability on small screens */    }
+      font-size: 8px; /* Adjust the font size for better readability on small screens */    }
 
     /* Additional responsive styling for specific elements */
     /* For example: */
     #title {
-      margin-top: 150px;
-      width: 90%/* Adjust the title font size for phones */
+      margin-top: 180px;
+      width: 80%; /* Adjust the title font size for phones */
+    }
+
+
+    #home-background {
+      display: none;
     }
 
     /* dream big */
@@ -332,19 +369,80 @@ html {
     /* oly */
     #wowza {
       font-size: 15px;
-      padding-inline: 2px;
+      width: 320px
     }
 
-   
-
-    #aa, #es, #b, #c {
-      height: 187px;
-      width: auto;
-      margin-bottom: 40vh;
+    .card-container {
+      flex-direction: column;
+      align-items: center;
     }
-
     
+    /* Adjust the card sizes and margins for phones */
+    #aa, #es, #b, #c {
+      height: 400px;
+      width: auto;
+      margin: 2vh 0;
+    }
+    
+    /* Center-align the images */
+    #aa, #es, #b, #c {
+      margin-left: auto;
+      margin-right: auto;
+    }
 
+ 
+    #dreambigimg4 {
+      height: 242px; 
+      width: 242px; 
+      transform: translate(50vw, -20vh)
+    }
+    
+    #dreambigimg3 {
+      height: 400px; 
+      width: 400px; 
+      transform: translate(50vw, -7vh)
+    }
+    
+    #dreambigimg2 {
+      height: 350px; 
+      width: 350px; 
+      transform: translate(-10vw, 10vh)
+    }
+    
+    #dreambigimg5 {
+      height: 250px; 
+      width: 250px; 
+      transform: translate(-135vw, 38vh)
+    }
+    
+    /* ppl */
+    #contact {
+      margin-top: 30vh;
+    }
+
+    h4, #ptext {
+      width: 450px;
+    }
+
+    /* #pplimg {
+      transform: translateY(-2vh);
+      width: 700px;
+      height: auto
+    } */
+
+    #pplimg {
+      display: none;
+    }
+
+    /* button stuff */
+    #ptext {
+      padding-bottom: 50vh;
+    }
+
+    #bsm, #bsbg {
+      width: 350px;
+    }
+    
  
     /* Add more responsive styles as needed */
   }
