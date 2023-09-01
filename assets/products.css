@@ -327,3 +327,14 @@ html {
   ::-webkit-scrollbar-thumb {
     background: #FF0000;
   }
+
+
+  @media only screen and (max-width: 768px) {
+    body {
+        font-size: 10px
+    }
+
+    
+
+
+  }
