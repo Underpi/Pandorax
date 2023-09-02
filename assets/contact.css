@@ -76,3 +76,40 @@ html {
   ::-webkit-scrollbar-thumb {
     background: #FF0000;
   }
+
+
+
+@media only screen and (max-width: 768px) {
+  body {
+      font-size: 10px
+  }
+
+  header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+    }
+    
+  #logo {
+      margin-top: 0;
+      margin-bottom: -10px;
+      width: 200px;
+
+    }
+    
+  .head {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    
+  #prod, #prog, #te, #cont {
+      margin: 5px;
+      padding: 2.5px 12.5px;
+    }
+
+    
+
+
+  }
