@@ -32,6 +32,10 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+body {
+  overflow-x: hidden !important;
+  overflow-y: hidden
+}
 
 
 #prod:hover, #prog:hover, #te:hover, #cont:hover {
@@ -108,9 +112,14 @@ html {
       padding: 2.5px 12.5px;
     }
 
-  .cool {
-    padding-inline: 5vh
-  }
+    body {
+      overflow-x: hidden !important;
+      overflow-y: hidden
+    }
+
+    .cool {
+      padding-inline: 5vh
+    }
 
     
 

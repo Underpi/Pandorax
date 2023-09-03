@@ -22,6 +22,11 @@ body {
   overflow-x: hidden !important;
 }
 
+.copyright {
+  margin-bottom: 3vh;
+  display: flex;
+  justify-content: center;
+}
 
 #pplimg {
   opacity: 50%;
@@ -292,7 +297,7 @@ p {
 
 .btn {
   padding-bottom: 13%;
-  margin-bottom: 25vh;
+  margin-bottom: 21vh;
   padding: 15px 28px;
   border-radius: 16px;
   font-size: xx-large;
