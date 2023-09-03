@@ -18,7 +18,7 @@ body {
 
 #logo {
     margin-top: -6vh;
-    width: 300px;
+    width: 335px;
     height: auto;
     margin-bottom: -8vh;
 }
@@ -28,7 +28,7 @@ body {
     background-color: transparent;
     border: 1px solid transparent;
     padding: 10px 50px;
-    font-size: 110%;
+    font-size: 125%;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -80,6 +80,11 @@ html {
     background: #FF0000;
   }
 
+  .copyright {
+    margin-bottom: 3vh;
+    display: flex;
+    justify-content: center;
+  }
 
 
 @media only screen and (max-width: 768px) {

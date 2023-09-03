@@ -39,6 +39,12 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.copyright {
+  margin-top: 10vh;
+  margin-bottom: 3vh;
+  display: flex;
+  justify-content: center;
+}
 
 
 #prod:hover, #prog:hover, #te:hover, #cont:hover {

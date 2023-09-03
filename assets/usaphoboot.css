@@ -121,7 +121,11 @@ ul {
 
   }
 
-
+  .copyright {
+    margin-bottom: 3vh;
+    display: flex;
+    justify-content: center;
+  }
 
 
 

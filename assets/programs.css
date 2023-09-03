@@ -206,6 +206,12 @@ html {
     overflow-y: hidden
   }
 
+  .copyright {
+  margin-bottom: 3vh;
+  display: flex;
+  justify-content: center;
+}
+
 
 @media only screen and (max-width: 768px) {
   body {
