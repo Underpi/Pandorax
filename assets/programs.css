@@ -104,6 +104,20 @@ p {
 }
 
 
+#idk {
+  font-size: 140%;
+}
+
+h2 {
+  font-size: 500%; 
+  font-weight: 600
+}
+
+#idek {
+  font-size: 140%;
+}
+
+
 .useso {
     border-width:4px; 
     border-style:solid; 
@@ -180,12 +194,16 @@ html {
     overflow-x: hidden;
   }
   ::-webkit-scrollbar {
-    width: 0;  /* Remove scrollbar space */
-    background: transparent;  /* Optional: just make scrollbar invisible */
+    width: 0;  
+    background: transparent; 
   }
-  /* Optional: show position indicator in red */
   ::-webkit-scrollbar-thumb {
     background: #FF0000;
+  }
+
+  body {
+    overflow-x: hidden !important;
+    overflow-y: hidden
   }
 
 
@@ -219,7 +237,13 @@ html {
       padding: 2.5px 12.5px;
     }
 
-    
+    h2 {
+      font-size: 40px;
+    }
+
+    #idk, #idek {
+      font-size: 12px;
+    }
 
 
   }
