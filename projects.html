@@ -45,40 +45,40 @@
     
     <section class="parallax usabo">
       <section class="usabo-content">
-        <h1 data-aos="fade-up" data-aos-once="true" data-aos-easing="True" style="font-size: 700%; font-weight: 600">USABO Guide</h1>
-        <p data-aos="fade-up" data-aos-once="true" data-aos-easing="True" data-aos-delay="50" style="font-size: 140%;">Guiding your interest and success for the Biology Olympiad, and beyond.</p>
+        <h1 data-aos="fade-up" data-aos-once="true" data-aos-easing="True" >USABO Guide</h1>
+        <p id="augh"data-aos="fade-up" data-aos-once="true" data-aos-easing="True" data-aos-delay="50" >Guiding your interest and success for the Biology Olympiad, and beyond.</p>
         <a href="https://usabo.guide"><button id="usabob">Learn More</button></a>
       </section>
     </section>
 
     <div class="parallax calcp">
       <section class="calcp-content" >
-        <h2 data-aos="fade-up" data-aos-once="true" data-aos-easing="True" style="font-size: 700%; font-weight: 300">Calculus Primer</h2>
-        <p data-aos="fade-up" data-aos-once="true" data-aos-delay="50" data-aos-easing="True" style="font-size: 140%;">Master the fundamental knowledge for the Physics Olympiad and beyond.</p>
+        <h2 data-aos="fade-up" data-aos-once="true" data-aos-easing="True" >Calculus Primer</h2>
+        <p id="augh" data-aos="fade-up" data-aos-once="true" data-aos-delay="50" data-aos-easing="True" >Master the fundamental knowledge for the Physics Olympiad and beyond.</p>
         <a href="https://www.calc.guide"><button id="calcpop">Learn More</button></a>
       </section>
     </div>
 
     <div class="parallax usaaao">
       <section class="usaaao-content">
-        <h3 data-aos="fade-up" data-aos-once="true" data-aos-easing="True" style="font-size: 700%; font-weight: 600; color: #d9d2e9">USAAAO Guide</h3>
-        <p data-aos="fade-up" data-aos-once="true" data-aos-delay="50" data-aos-easing="True" style="font-size: 140%;">Guiding your interest and success for the Astrophysics Olympiad, and beyond.</p>
+        <h1 data-aos="fade-up" data-aos-once="true" data-aos-easing="True" style="color: #d9d2e9">USAAAO Guide</h1>
+        <p id="augha"data-aos="fade-up" data-aos-once="true" data-aos-delay="50" data-aos-easing="True" >Guiding your interest and success for the Astrophysics Olympiad, and beyond.</p>
         <a href="https://usaaao.guide"><button id="usa">Learn More</button></a>
       </section>
     </div>
 
     <div class="parallax useso">  
       <section class="useso-content">
-        <h4 data-aos="fade-up" data-aos-once="true" data-aos-easing="True" style="font-size: 700%; font-weight: 600; color: #cfe2f3;">USESO Guide</h4>
-        <P data-aos="fade-up" data-aos-once="true" data-aos-delay="50" data-aos-easing="True" style="font-size: 140%;">Guiding your interest and success for the Earth Science Olympiad, and beyond.</P>
+        <h1 data-aos="fade-up" data-aos-once="true" data-aos-easing="True"  style="color: #cfe2f3;">USESO Guide</h1>
+        <p id="augha" data-aos="fade-up" data-aos-once="true" data-aos-delay="50" data-aos-easing="True" >Guiding your interest and success for the Earth Science Olympiad, and beyond.</p>
         <a href="https://useso.guide"><button id="usesop">Learn More</button></a>
       </section>
     </div>
 
     <div class="parallax seekso">
       <section class="seekso-content">
-        <h5 data-aos="fade-up" data-aos-once="true" data-aos-easing="True" style="font-size: 700%; font-weight: 600">Seekso.org</h5>
-        <p data-aos="fade-up" data-aos-once="true" data-aos-easing="True" data-aos-delay="50" style="font-size: 140%;">The Smart Search Engine made for students, by students.</p>
+        <h1 data-aos="fade-up" data-aos-once="true" data-aos-easing="True" >Seekso.org</h1>
+        <p id="augh" data-aos="fade-up" data-aos-once="true" data-aos-easing="True" data-aos-delay="50" >The Smart Search Engine made for students, by students.</p>
         <a href="https://seekso.org"><button id="seeksop">Learn More</button></a>
       </section>
     </div>
@@ -105,13 +105,15 @@
 
 document.addEventListener('DOMContentLoaded', function () {
     const parallaxSections = document.querySelectorAll('.parallax');
+    
+    function isSmallScreen() {
+      return window.innerWidth <=768;
+    }
 
     window.addEventListener('scroll', function () {
         parallaxSections.forEach(section => {
             const scrollPosition = window.pageYOffset+20;
-            const sectionOffset = section.offsetTop;
-            
-            // Adjust the section speed as needed
+            const sectionOffset = section.offsetTop;                   // Adjust the section speed as needed
             let sectionSpeed = 0.5; // Change this value for the "useso" section
             
             // Limit the maximum scroll offset where the background stops
@@ -121,11 +123,40 @@ document.addEventListener('DOMContentLoaded', function () {
                 sectionSpeed = 0.7; // Adjust this value for the desired effect
                 maxScroll = 100;
             }
-           else if (section.classList.contains('calcp')) {
-                const adjustedStartPosition = sectionOffset +10; // Adjust the value as needed
+           else if (section.classList.contains('calcp') && !isSmallScreen()) {
+                const adjustedStartPosition = sectionOffset +150; // Adjust the value as needed
                 section.style.backgroundPositionY = (scrollPosition - adjustedStartPosition) * sectionSpeed + 'px';
                 return; // Skip the rest of the calculations for this section          
               }
+           else if (section.classList.contains('calcp') && isSmallScreen()){
+                const adjustedStartPosition = sectionOffset +30; // Adjust the value as needed
+                section.style.backgroundPositionY = (scrollPosition - adjustedStartPosition) * sectionSpeed + 'px';
+                return; // Skip the rest of the calculations for this section     
+                     
+              }
+
+           else if (section.classList.contains('usabo') && isSmallScreen()){
+                const adjustedStartPosition = sectionOffset +50; // Adjust the value as needed
+                section.style.backgroundPositionY = (scrollPosition - adjustedStartPosition) * sectionSpeed + 'px';
+                return; // Skip the rest of the calculations for this section     
+                     
+              }
+
+           else if (section.classList.contains('usabo') && !isSmallScreen()) {
+                const adjustedStartPosition = sectionOffset +350; // Adjust the value as needed
+                section.style.backgroundPositionY = (scrollPosition - adjustedStartPosition) * sectionSpeed + 'px';
+                return; // Skip the rest of the calculations for this section     
+                     
+              }
+
+           else if (section.classList.contains('usaaao') && isSmallScreen()){
+                const adjustedStartPosition = sectionOffset +20; // Adjust the value as needed
+                section.style.backgroundPositionY = (scrollPosition - adjustedStartPosition) * sectionSpeed + 'px';
+                return; // Skip the rest of the calculations for this section     
+                     
+              }
+
+    
 
             section.style.backgroundPositionY = (scrollPosition-313 - sectionOffset) * sectionSpeed + 'px';
         });

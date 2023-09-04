@@ -12,6 +12,11 @@ body {
 
   }
 
+  body {
+    overflow-x: hidden !important;
+    overflow-y: hidden
+  }
+
 .crazy {
     display: flex; 
     justify-content: center;
@@ -48,6 +53,25 @@ body {
     justify-content: space-between 4px;
     gap: 3px;
 }
+
+
+h1 {
+    font-size: 700%; font-weight: 600 
+}
+
+h2 {
+    font-size: 700%; font-weight: 300 
+}
+
+#augh {
+    font-size: 140%;
+}
+
+#augha {
+    font-size: 140%;
+}
+
+
 
 
 .top {
@@ -365,7 +389,37 @@ html {
         padding: 2.5px 12.5px;
     }
 
+
+    .content {
+        padding-inline: 45px
+    }
     
+    .stats {
+        font-size: 30px
+    }
+
+    h1 {
+        font-size: 50px
+    }
+
+    h2 {
+        font-size: 45px;
+    }
+    
+    #augh {
+        font-size: 10px
+    }
+
+    #augha {
+        font-size: 9px;
+    }
+
+    .calcp {
+        background-position: center;
+        background-size: 400%;
+        }
+
+
 
 
   }
