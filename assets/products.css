@@ -125,7 +125,7 @@ h2 {
 .parallax {
     position: relative;
     height: 100vh; /* Adjust the height as needed */
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-size: cover;
     background-repeat: no-repeat;
 }
