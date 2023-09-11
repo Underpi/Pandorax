@@ -201,23 +201,24 @@
       }, 0);
   });
 
-  function adjustForAddressBar() {
-    const windowHeight = window.innerHeight;
-    const bodyHeight = document.body.clientHeight;
+  function adjustBackgrounds() {
+    windowHeight = window.document.documentElement.clientHeight;
+    $('#section-01-home').css('min-height', windowHeight);
+  }     
+  // Triggers Sizing on Load (783 = 800px accounting for 17px of scrollbar)
+  if ($(window).width() <= 783) {
+      adjustBackgrounds();
+  } else {
 
-    if (windowHeight > bodyHeight) {
-        // Address bar is visible
-        // You can add CSS adjustments here to handle this scenario
-    } else {
-        // Address bar is not visible
-        // You can add CSS adjustments here for the normal layout
-    }
   }
+  // Triggers Sizing on Browser Resize (783 = 800px accounting for 17px of scrollbar)
+  $(window).resize(function() {
+    if ($(window).width() <= 783) {
+      adjustBackgrounds();
+    } else {
 
-  // Call the function initially and whenever the window is resized
-  adjustForAddressBar();
-  window.addEventListener("resize", adjustForAddressBar);
-
+    }
+  }); 
   </script>
   <script src="assets/script.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
