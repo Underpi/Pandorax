@@ -309,22 +309,7 @@ p {
   border: none;
 }
 
-@keyframes btn {
-  0% {
-      border-radius: 16px;
-  }
-  100% {
-      border-radius: 0px;
-  }
-  
 
-}
-
-/* Add the hover effect */
-.btn:hover {
-  animation: btn ease 0.5s;
-  animation-fill-mode: forwards;
-}
 
 html {
   overflow: scroll;
