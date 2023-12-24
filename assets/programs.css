@@ -173,6 +173,17 @@ h2 {
     border-radius: 18px;
 }
 
+.naclo {
+   border-width:4px; 
+    border-style:solid; 
+    padding-inline: 2vw;
+    padding-block: 1vw;
+    margin-inline: 18vw;
+    border-color:#f0ec16;
+    background-color: #54530a;
+    border-radius: 18px;
+}
+
 
 
 
