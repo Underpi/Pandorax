@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  
+body {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+
+  }
+
+header {
+    background-color: #000;
+}
+
+.crazy {
+    display: flex; 
+    justify-content: center;
+}
+
+#logo {
+    margin-top: -6vh;
+    width: 300px;
+    height: auto;
+    margin-bottom: -8vh;
+}
+
+#prod, #prog, #te, #cont {
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 10px 50px;
+    font-size: 110%;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+#prod:hover, #prog:hover, #te:hover, #cont:hover {
+    border-bottom: 1px solid #fff;
+    cursor: pointer;
+}
+
+.head {
+    display: flex; 
+    justify-content: center;
+    flex-direction: row;
+    align-items: under;
+    justify-content: space-between 4px;
+    gap: 3px;
+}
+
+body {
+  background-color: #02241f
+}
+
+
+h1 {
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 450%;
+    padding-block: 4vh;
+    text-align: center;
+    padding-inline: 20vw;
+}
+
+.description {
+    font-size: 90%;
+    border-radius: 15px;
+    background-color: #103738       ;
+    padding: 2vw;
+    margin-inline: 25vw
+}
+
+h3 {
+  display: flex;
+  justify-content: center;
+  padding-block: 8vh; /* change to only top when making the rest of page, do it */
+  font-size: 250%;
+  font-weight: 600
+}
+
+ul {
+  list-style-position: inside;
+  line-height: 110%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.executive {
+    display: flex;
+    gap: 40px; 
+    flex-wrap: wrap;
+    padding-inline: 6vw;
+    justify-content: center;
+  }
+  
+  .profile-card {
+    background-color: #153e4c;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 478.8px;
+    width: 371px; 
+    border-radius: 20px;
+    margin-bottom: -5vh;
+  }
+  
+  .profile-card img {
+    width: 371px;
+    height: 377px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 20px 20px 0px 0px;
+  }
+  
+  .profile-details h2,
+  .profile-details ul {
+    padding-inline: 30px;
+  
+  }
+  
+  .profile-details h2 {
+    margin-bottom: 5px;
+  }
+  
+
+  .break {
+    flex-basis: 100%;
+    height: 0;
+  }
+
+  html {
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+  ::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+  }
+  /* Optional: show position indicator in red */
+  ::-webkit-scrollbar-thumb {
+    background: #FF0000;
+  }
+
+
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+
+  #bruh {
+    color: #000;
+    background-color: #fff;
+    opacity: 60%;
+    padding: 7px 20px;
+    border-radius: 12px;
+    font-size: 110%;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    margin-block: 15vh;
+    border: none;
+  }
+
+  #bruh:hover {
+    animation: btnnanim ease 0.2s;
+    animation-fill-mode: forwards;
+  }
+
+@keyframes btnnanim {
+    0% {
+        opacity: 60%
+    }
+
+    100% {
+        opacity:  100%
+    }
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+      font-size: 10px
+  }
+
+  header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+    }
+    
+  #logo {
+      margin-top: 0;
+      margin-bottom: -10px;
+      width: 200px;
+
+    }
+    
+  .head {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    
+  #prod, #prog, #te, #cont {
+      margin: 5px;
+      padding: 2.5px 12.5px;
+    }
+
+    
+
+
+  }
+
+  .copyright {
+    margin-bottom: 3vh;
+    display: flex;
+    justify-content: center;
+  }
