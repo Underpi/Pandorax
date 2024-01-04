@@ -53,7 +53,7 @@ header {
 }
 
 body {
-  background-color: #02241f
+  background-color: #43165e
 }
 
 
@@ -70,7 +70,7 @@ h1 {
 .description {
     font-size: 90%;
     border-radius: 15px;
-    background-color: #103738       ;
+    background-color: #a136e3       ;
     padding: 2vw;
     margin-inline: 25vw
 }
@@ -116,7 +116,7 @@ ul {
   }
   
   .profile-card {
-    background-color: #153e4c;
+    background-color: #a136e3;
     display: flex;
     flex-direction: column;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
