@@ -153,20 +153,8 @@
                   return; // Skip the rest of the calculations for this section     
                       
                 }
-
-            else if (section.classList.contains('useso') && !isSmallScreen()) {
-              const adjustedStartPosition = sectionOffset +1000; // Adjust the value as needed
-                  section.style.backgroundPositionY = (scrollPosition - adjustedStartPosition) * sectionSpeed + 'px';
-                  return; // Skip the rest of the calculations for this section     
-              }
-
-            else if (section.classList.contains('useso') && isSmallScreen()) {
-              const adjustedStartPosition = sectionOffset -100; // Adjust the value as needed
-                  section.style.backgroundPositionY = (scrollPosition - adjustedStartPosition) * sectionSpeed + 'px';
-                  return; // Skip the rest of the calculations for this section     
-              }
             
-              else if (section.classList.contains('seekso')) {
+              else if (section.classList.contains('useso')) {
               const adjustedStartPosition = sectionOffset -50; // Adjust the value as needed
                   section.style.backgroundPositionY = (scrollPosition - adjustedStartPosition) * sectionSpeed + 'px';
                   return; // Skip the rest of the calculations for this section     
