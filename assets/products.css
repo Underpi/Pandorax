@@ -135,8 +135,7 @@ h2 {
 .usabo-content,
 .calcp-content,
 .usaaao-content,
-.useso-content,
-.seekso-content {
+.useso-content {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -197,13 +196,7 @@ h2 {
     }
 }
 
-.seekso {
-    background-image: url('webstuff/seeksobg.png'); /* Update with your image */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    transform: scale(1)
-}
+
 
 
 
