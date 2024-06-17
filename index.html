@@ -36,7 +36,7 @@
     </h1>
     <p id="btext">Turning dreams into reality.</p>
   </section>
-<div class="arrow animated bounce"></div>
+<div id='frf' class="arrow animated bounce"></div>
 
 
   <section id="about" style="margin-top: 10vh; position:relative; display: flex; flex-direction: column; align-items: center;">
@@ -119,6 +119,18 @@
       }
     })
   });
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+  const e = document.getElementById('frf');
+
+  e.addEventListener('click', function() {
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: 'smooth'
+    });
+  });
+});
   </script>
   <script>
     document.addEventListener("DOMContentLoaded", (event) => {
@@ -384,41 +396,6 @@
       }
     );
 
-    gsap.fromTo("#bsm", 
-      {
-        opacity: 0,
-        x: -400
-      }, 
-      {
-        opacity: 1,
-        x: 0, 
-        duration: 0.5,
-        ease: "power1.inOut",
-        scrollTrigger: {
-          trigger: "#bsm",
-          start: "top 80%",
-          end: "top 50%", 
-        }
-      }
-    );
-
-    gsap.fromTo("#bsbg", 
-      {
-        opacity: 0,
-        x: -400
-      }, 
-      {
-        opacity: 1,
-        x: 0, 
-        duration: 0.5,
-        ease: "power1.inOut",
-        scrollTrigger: {
-          trigger: "#bsbg",
-          start: "top 80%",
-          end: "top 50%", 
-        }
-      }
-    );
     });
   </script>  
 </div>
