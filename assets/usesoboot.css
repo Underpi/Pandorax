@@ -11,9 +11,7 @@ body {
 
   }
 
-header {
-    background-color: #000;
-}
+
 
 .crazy {
     display: flex; 
@@ -21,26 +19,28 @@ header {
 }
 
 #logo {
-    margin-top: -6vh;
-    width: 300px;
-    height: auto;
-    margin-bottom: -8vh;
+  position: absolute;
+  width: 150px;
+  height: 93.75;
+  left: 0;
+  margin-left: 50px;
 }
 
-#prod, #prog, #te, #cont {
-    color: #fff;
-    background-color: transparent;
-    border: 1px solid transparent;
-    padding: 10px 50px;
-    font-size: 110%;
-    font-family: 'Poppins', sans-serif;
+#yoop, #prod, #prog, #te, #cont {
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 10px 30px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  font-size: 110%;
+  font-family: 'Poppins', sans-serif;
 }
 
 
-
-#prod:hover, #prog:hover, #te:hover, #cont:hover {
-    border-bottom: 1px solid #fff;
-    cursor: pointer;
+#yoop:hover, #prod:hover, #prog:hover, #te:hover, #cont:hover {
+  border-bottom: 1px solid #fff;
+  cursor: pointer;
 }
 
 .head {
