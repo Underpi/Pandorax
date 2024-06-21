@@ -30,7 +30,8 @@ body {
 
 #pplimg {
   opacity: 50%;
-  width: 90vw;
+  width: 1382.4px;
+  height: 1382.4px;
   transform: translateY(-35vh);
 }
 
@@ -461,7 +462,7 @@ html {
     /* Adjust the card sizes and margins for phones */
     #aa, #es, #b, #c {
       height: 400px;
-      width: auto;
+      width: 323px;
       margin: 2vh 0;
     }
     
@@ -549,7 +550,7 @@ html {
   
   .test {
     gap: 50px;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
   }
  
   
