@@ -528,7 +528,30 @@ html {
     /* Add more responsive styles as needed */
   }
 
+  #tone, #ttwo, #tthree, #tfour, #tfive, #tsix {
+    background-image: linear-gradient(#1c181f 8%, black 92%);
+    width: 500px;
+    padding: 100px 50px;
+    justify-content: space-between ;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 6px;
+    border-color: #fff;
+    border: none;
+    line-height: 1.4;
+    color: #e9e8e9;
+    font-weight: 530;
+  }
 
-
+  .testone, .testtwo, .testthree {
+    gap: 75px;
+  }
+  
+  .test {
+    gap: 50px;
+    margin-bottom: 200px;
+  }
+ 
+  
 
 
