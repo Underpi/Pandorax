@@ -169,41 +169,6 @@ body {
   background-position: center;
 } */
 
-/* header {
-  background-color: #333;
-  color: #fff;
-  padding: 18px; /* Increase the padding to make the nav bar thicker */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
-  z-index: 9999; /* Set a higher z-index value */
-} */
-
-nav ul {
-  list-style: none;
-}
-
-nav li {
-  display: inline-block;
-  margin-right: 20px;
-}
-
-nav li:last-child {
-  margin-right: 0;
-}
-
-nav a {
-  text-decoration: none;
-  color: #fff;
-  transition: color 0.3s;
-}
-
-nav a:hover {
-  color: #f00;
-}
-
 
 #home-background {
   position: fixed;
