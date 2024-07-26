@@ -4,12 +4,65 @@
   box-sizing: border-box;
 }
 
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+
+}
+
+.space-x-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1rem /* 16px */ * var(--tw-space-x-reverse));
+  margin-left: calc(1rem /* 16px */ * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.crazy {
+  display: flex; 
+  justify-content: center;
+}
+
+#logo {
+position: absolute;
+width: 150px;
+height: 93.75;
+left: 0;
+margin-left: 50px;
+}
+
+#yoop, #prod, #prog, #te, #cont {
+color: #fff;
+background-color: transparent;
+border: 1px solid transparent;
+padding: 10px 30px;
+margin-top: 30px;
+margin-bottom: 50px;
+font-size: 110%;
+font-family: 'Poppins', sans-serif;
+}
+
+
+#yoop:hover, #prod:hover, #prog:hover, #te:hover, #cont:hover {
+border-bottom: 1px solid #fff;
+cursor: pointer;
+}
+
+.head {
+  display: flex; 
+  justify-content: center;
+  flex-direction: row;
+  align-items: under;
+  justify-content: space-between 4px;
+  gap: 3px;
+}
 
 
 body {
   background-color: #000;
   color: #fff;
 
+}
+
+#grad {
+    background-image: linear-gradient(to bottom,black , #8051ff);
 }
 
   
@@ -116,7 +169,7 @@ body {
   background-position: center;
 } */
 
-header {
+/* header {
   background-color: #333;
   color: #fff;
   padding: 18px; /* Increase the padding to make the nav bar thicker */
@@ -126,7 +179,7 @@ header {
   width: 100%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
   z-index: 9999; /* Set a higher z-index value */
-}
+} */
 
 nav ul {
   list-style: none;
@@ -443,35 +496,7 @@ html {
     
     #dbt {
       font-size: 12px;
-      padding-inline: 30px;
-
-    }
-
-
-    /* oly */
-    #wowza {
-      font-size: 15px;
-      width: 320px
-    }
-
-    .card-container {
-      flex-direction: column;
-      align-items: center;
-    }
-    
-    /* Adjust the card sizes and margins for phones */
-    #aa, #es, #b, #c {
-      height: 400px;
-      width: 323px;
-      margin: 2vh 0;
-    }
-    
-    /* Center-align the images */
-    #aa, #es, #b, #c {
-      margin-left: auto;
-      margin-right: auto;
-    }
-
+      padding-inline: 30px; }
  
     #dreambigimg4 {
       height: 242px; 
