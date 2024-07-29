@@ -254,7 +254,7 @@ h2 {
 }
 
 h4 {
-  padding-top: 20vh;
+  margin-top: 5vh;
   font-size: 270%;
   padding-inline: 20vw;
   padding-bottom: 1.5%;
@@ -292,7 +292,7 @@ p {
   display: flex;
   flex-direction: row; /* Display cards in a row for larger screens */
   justify-content: center;
-  margin-bottom: 5vh;
+  margin-bottom: 10vh;
 }
 
 
