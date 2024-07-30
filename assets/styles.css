@@ -171,7 +171,7 @@ body {
 
 
 #home-background {
-  position: fixed;
+  position:fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -179,9 +179,9 @@ body {
   background-image: url("webstuff/titleb2.png");
   background-position: center;
   background-size: cover;
-  opacity: 1; /* Initial opacity */
+  opacity: 1; 
   z-index: -1;
-  transition: opacity 0.3s ease; /* Transition for fading effect */
+  transition: opacity 0.1s ease;
 }
 
 #home {
