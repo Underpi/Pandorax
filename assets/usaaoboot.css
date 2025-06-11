@@ -53,7 +53,7 @@ body {
 }
 
 body {
-  background-color: #02241f
+  background-color: #5c1328;
 }
 
 
@@ -70,7 +70,7 @@ h1 {
 .description {
     font-size: 90%;
     border-radius: 15px;
-    background-color: #103738       ;
+    background-color: #bf0832     ;
     padding: 2vw;
     margin-inline: 25vw
 }
