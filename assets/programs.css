@@ -187,6 +187,16 @@ h2 {
     border-radius: 18px;
 }
 
+.usaao {
+   border-width:4px; 
+    border-style:solid; 
+    padding-inline: 2vw;
+    padding-block: 1vw;
+    margin-inline: 18vw;
+    border-color:#bf0832;
+    background-color: #5c1328;
+    border-radius: 18px;
+}
 
 
 
