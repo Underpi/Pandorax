@@ -441,6 +441,32 @@ html {
     body {
       font-size: 8px; /* Adjust the font size for better readability on small screens */    }
 
+    /* nav */
+
+    .head {
+      flex-wrap: wrap;
+      gap: 4px 2px;
+    }
+
+    .head > div:first-child {
+      flex: 0 0 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    #logo {
+      position: static;
+      margin-left: 0;
+      width: 110px;
+    }
+
+    #yoop, #prod, #prog, #te, #cont {
+      padding: 14px 10px;
+      margin-top: 8px;
+      margin-bottom: 12px;
+      font-size: 13px;
+    }
+
     /* Additional responsive styling for specific elements */
     /* For example: */
     #title {
