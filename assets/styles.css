@@ -658,3 +658,61 @@ html {
   
 
 
+
+  /* tablet + small laptop. The desktop layout is built for ~1400px: the
+     absolute logo lands on the nav below ~1100px, and several fixed-width
+     rows (#pplimg 1382px, the two 500px testimonials, the 4x323px covers)
+     overflow the viewport until 1440px. */
+
+  @media only screen and (min-width: 769px) and (max-width: 1100px) {
+    .head {
+      flex-wrap: wrap;
+    }
+
+    .head > div:first-child {
+      flex: 0 0 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    #logo {
+      position: static;
+      margin-left: 0;
+      width: 130px;
+    }
+  }
+
+  @media only screen and (min-width: 769px) and (max-width: 1439px) {
+    #ppl {
+      width: 100%;
+    }
+
+    #pplimg {
+      width: 100%;
+      height: auto;
+    }
+
+    .card-container {
+      padding-inline: 24px;
+    }
+
+    #aa, #es, #b, #c {
+      width: 23%;
+      height: auto;
+    }
+
+    /* the inline style="" on these rows sets flex-direction: row, so wrap
+       and width are the only levers a stylesheet still has here */
+    .testone, .testtwo, .testthree {
+      width: 100%;
+      justify-content: center;
+      padding-inline: 24px;
+    }
+
+    #tone, #ttwo, #tthree, #tfour, #tfive, #tsix {
+      flex: 1 1 0;
+      min-width: 0;
+      width: auto;
+      max-width: 500px;
+    }
+  }
