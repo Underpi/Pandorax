@@ -237,6 +237,27 @@ h2 {
   font-weight: 600;
 }
 
+/* hero */
+
+.hero-row {
+  flex-wrap: wrap;
+}
+
+.hero-title {
+  font-size: 77px;
+  font-weight: 400;
+}
+
+.hero-mark {
+  width: 291px;
+  height: 173px;
+}
+
+.hero-sub {
+  text-align: center;
+  margin-top: -60px;
+}
+
 #dbt {
   font-size: 160%;
   justify-content: center;
@@ -465,6 +486,21 @@ html {
       margin-top: 8px;
       margin-bottom: 12px;
       font-size: 13px;
+    }
+
+    /* hero */
+
+    .hero-title {
+      font-size: 32px;
+    }
+
+    .hero-mark {
+      width: 121px;
+      height: 72px;
+    }
+
+    .hero-sub {
+      margin-top: -25px;
     }
 
     /* Additional responsive styling for specific elements */
