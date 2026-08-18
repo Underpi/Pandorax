@@ -203,25 +203,37 @@ ul {
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 10px;
+      padding: 10px 0;
     }
     
   #logo {
+      position: static;
       margin-top: 0;
-      margin-bottom: -10px;
-      width: 200px;
+      margin-bottom: 0;
+      margin-left: 0;
+      width: 110px;
 
     }
     
   .head {
       display: flex;
       flex-direction: row;
+      flex-wrap: wrap;
       align-items: center;
+      gap: 4px 2px;
     }
     
-  #prod, #prog, #te, #cont {
-      margin: 5px;
-      padding: 2.5px 12.5px;
+  .head > div:first-child {
+      flex: 0 0 100%;
+      display: flex;
+      justify-content: center;
+    }
+    
+  #yoop, #prod, #prog, #te, #cont {
+      margin-top: 8px;
+      margin-bottom: 12px;
+      padding: 14px 10px;
+      font-size: 13px;
     }
 
     
