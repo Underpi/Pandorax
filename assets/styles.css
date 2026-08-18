@@ -318,10 +318,18 @@ p {
 
 
 
+.guides-heading {
+  font-size: 43px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 3vh;
+}
+
 .card-container {
   display: flex;
   flex-direction: row; /* Display cards in a row for larger screens */
   justify-content: center;
+  margin-top: 8vh;
   margin-bottom: 10vh;
 }
 
@@ -408,6 +416,7 @@ p {
 
 
 #dbi {
+  display: flex;
   filter: brightness(70%)
 }
 
@@ -463,6 +472,30 @@ html {
 ::-webkit-scrollbar-thumb {
   background: #FF0000;
 }
+
+  #tone, #ttwo, #tthree, #tfour, #tfive, #tsix {
+    background-image: linear-gradient(#1c181f 8%, black 92%);
+    width: 500px;
+    padding: 100px 50px;
+    justify-content: space-between ;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 6px;
+    border-color: #fff;
+    border: none;
+    line-height: 1.4;
+    color: #e9e8e9;
+    font-weight: 530;
+  }
+
+  .testone, .testtwo, .testthree {
+    gap: 75px;
+  }
+  
+  .test {
+    gap: 50px;
+    margin-bottom: 100px;
+  }
 
   /* Your existing styles */
 
@@ -544,27 +577,27 @@ html {
       padding-inline: 30px; }
  
     #dreambigimg4 {
-      height: 242px; 
-      width: 242px; 
-      transform: translate(50vw, -20vh)
+      height: 80px; 
+      width: 80px; 
+      transform: translate(0, -40px)
     }
     
     #dreambigimg3 {
-      height: 400px; 
-      width: 400px; 
-      transform: translate(50vw, -7vh)
+      height: 110px; 
+      width: 110px; 
+      transform: translate(0, -5px)
     }
     
     #dreambigimg2 {
-      height: 350px; 
-      width: 350px; 
-      transform: translate(-10vw, 10vh)
+      height: 100px; 
+      width: 100px; 
+      transform: translate(0, 50px)
     }
     
     #dreambigimg5 {
-      height: 250px; 
-      width: 250px; 
-      transform: translate(-135vw, 38vh)
+      height: 90px; 
+      width: 90px; 
+      transform: translate(0, -37px)
     }
     
     /* ppl */
@@ -573,7 +606,8 @@ html {
     }
 
     h4, #ptext {
-      width: 450px;
+      width: 100%;
+      padding-inline: 24px;
     }
 
     /* #pplimg {
@@ -594,33 +628,31 @@ html {
     #bsm, #bsbg {
       width: 350px;
     }
-    
- 
+
+    /* stop fixed-width rows overflowing the viewport */
+
+    .card-container {
+      flex-wrap: wrap;
+    }
+
+    #aa, #es, #b, #c {
+      width: 47%;
+      height: auto;
+      margin-bottom: 6vh;
+    }
+
+    .testone, .testtwo, .testthree {
+      flex-wrap: wrap;
+      gap: 24px;
+      padding-inline: 24px;
+    }
+
+    #tone, #ttwo, #tthree, #tfour, #tfive, #tsix {
+      width: 100%;
+      padding: 32px 20px;
+    }
+
     /* Add more responsive styles as needed */
-  }
-
-  #tone, #ttwo, #tthree, #tfour, #tfive, #tsix {
-    background-image: linear-gradient(#1c181f 8%, black 92%);
-    width: 500px;
-    padding: 100px 50px;
-    justify-content: space-between ;
-    border-width: 2px;
-    border-style: solid;
-    border-radius: 6px;
-    border-color: #fff;
-    border: none;
-    line-height: 1.4;
-    color: #e9e8e9;
-    font-weight: 530;
-  }
-
-  .testone, .testtwo, .testthree {
-    gap: 75px;
-  }
-  
-  .test {
-    gap: 50px;
-    margin-bottom: 100px;
   }
  
   
