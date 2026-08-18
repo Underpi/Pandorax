@@ -51,11 +51,37 @@ body {
 
 
 .cool {
-  display: flex;
-  justify-content: center;
+  max-width: 620px;
+  margin-inline: auto;
   padding-top: 10vh;
-  font-size: 120%;
-  padding-inline: 60vh;
+  padding-inline: 24px;
+  text-align: center;
+}
+
+.coolhead {
+  margin-bottom: 16px;
+  font-size: 290%;
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+}
+
+.coolsub {
+  font-size: 118%;
+  line-height: 1.65;
+  color: #c4c4c4;
+}
+
+.coolsub a {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid #a136e3;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.coolsub a:hover {
+  color: #d8b6f5;
+  border-bottom-color: #189FFD;
 }
   
 .form {
@@ -253,7 +279,16 @@ html {
     }
 
     .cool {
-      padding-inline: 5vh
+      padding-top: 6vh;
+      padding-inline: 20px;
+    }
+
+    .coolhead {
+      font-size: 26px;
+    }
+
+    .coolsub {
+      font-size: 14px;
     }
 
     #contactform {
@@ -288,3 +323,23 @@ html {
 
 
   }
+
+/* the absolute logo lands on top of the centered nav below ~1100px, so drop
+   it onto its own row the same way the phone layout does */
+@media only screen and (min-width: 769px) and (max-width: 1100px) {
+  .head {
+    flex-wrap: wrap;
+  }
+
+  .head > div:first-child {
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  #logo {
+    position: static;
+    margin-left: 0;
+    width: 130px;
+  }
+}

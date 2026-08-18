@@ -243,3 +243,23 @@ ul {
         opacity:  100%
     }
 }
+
+/* the absolute logo lands on top of the centered nav below ~1100px, so drop
+   it onto its own row the same way the phone layout does */
+@media only screen and (min-width: 769px) and (max-width: 1100px) {
+  .head {
+    flex-wrap: wrap;
+  }
+
+  .head > div:first-child {
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  #logo {
+    position: static;
+    margin-left: 0;
+    width: 130px;
+  }
+}
