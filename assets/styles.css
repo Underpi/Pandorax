@@ -62,7 +62,15 @@ body {
 }
 
 #grad {
-    background-image: linear-gradient(to bottom,black , #8051ff);
+    background-image: linear-gradient(135deg, #8051ff, #ea16ea);
+    border-color: transparent;
+    color: #fff;
+    box-shadow: 0 4px 16px #8051ff59;
+}
+
+#grad:hover {
+    box-shadow: 0 6px 22px #ea16ea73;
+    transform: translateY(-2px);
 }
 
   
@@ -176,9 +184,8 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("webstuff/tibleb2.gif");
-  background-position: center;
-  background-size: cover;
+  object-fit: cover;
+  background-color: #0b0a14;
   opacity: 1; 
   z-index: -1;
   transition: opacity 0.1s ease;
@@ -262,9 +269,32 @@ h2 {
   padding-inline: 350px;
 }
 
+.hero-cta {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 28px;
+  border-radius: 8px;
+  border-width: 1px;
+  border-style: solid;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.hero-cta:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
 .hero-cta-secondary {
-  border-color: black;
-  color: black;
+  background-color: #ffffff14;
+  border-color: #ffffff73;
+  color: #fff;
+}
+
+.hero-cta-secondary:hover {
+  background-color: #ffffff29;
+  border-color: #ffffffbf;
+  transform: translateY(-2px);
 }
 
 #dbt {
@@ -549,11 +579,6 @@ html {
       padding-inline: 24px;
     }
 
-    .hero-cta-secondary {
-      border-color: #fff;
-      color: #fff;
-    }
-
     /* Additional responsive styling for specific elements */
     /* For example: */
     #title {
@@ -561,10 +586,6 @@ html {
       width: 80%; /* Adjust the title font size for phones */
     }
 
-
-    #home-background {
-      display: none;
-    }
 
     /* dream big */
 

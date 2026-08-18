@@ -64,6 +64,118 @@ body {
   justify-content: center;
 }
 
+#contactform {
+  width: 100%;
+  max-width: 720px;
+  margin-inline: 20px;
+  margin-bottom: 8vh;
+  padding: 40px;
+  background-color: #0a0a0a;
+  border: 1px solid #262626;
+  border-radius: 16px;
+}
+
+.formrow {
+  display: flex;
+  gap: 20px;
+}
+
+.formfield {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-bottom: 22px;
+}
+
+.formfield label {
+  margin-bottom: 8px;
+  font-size: 85%;
+  letter-spacing: 0.5px;
+  color: #cfcfcf;
+}
+
+#contactform input,
+#contactform select,
+#contactform textarea {
+  width: 100%;
+  padding: 13px 15px;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #303030;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 100%;
+  outline: none;
+}
+
+#contactform textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+#contactform select {
+  cursor: pointer;
+}
+
+#contactform option {
+  background-color: #0a0a0a;
+  color: #fff;
+}
+
+#contactform input::placeholder,
+#contactform textarea::placeholder {
+  color: #6b6b6b;
+}
+
+#contactform input:focus,
+#contactform select:focus,
+#contactform textarea:focus {
+  border-color: #a136e3;
+  box-shadow: 0 0 0 3px rgba(161, 54, 227, 0.18);
+}
+
+/* Web3Forms spam trap. Must stay hidden — real people never fill it in. */
+.hp {
+  display: none;
+}
+
+#csend {
+  width: 100%;
+  padding: 15px 28px;
+  color: #fff;
+  background-image: linear-gradient(241deg, #189FFD, #AE63E8);
+  border: none;
+  border-radius: 16px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 115%;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#csend:hover {
+  filter: brightness(115%);
+}
+
+#csend:disabled {
+  cursor: default;
+  filter: brightness(60%);
+}
+
+.formstatus {
+  min-height: 20px;
+  margin-top: 16px;
+  text-align: center;
+  font-size: 90%;
+}
+
+.formstatus.ok {
+  color: #b8f890;
+}
+
+.formstatus.bad {
+  color: #FF0000;
+}
+
 .head {
     display: flex; 
     justify-content: center;
@@ -142,6 +254,34 @@ html {
 
     .cool {
       padding-inline: 5vh
+    }
+
+    #contactform {
+      margin-inline: 12px;
+      padding: 22px;
+    }
+
+    .formrow {
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .formfield label {
+      font-size: 12px;
+    }
+
+    #contactform input,
+    #contactform select,
+    #contactform textarea {
+      font-size: 16px;
+    }
+
+    #csend {
+      font-size: 16px;
+    }
+
+    .formstatus {
+      font-size: 13px;
     }
 
     
