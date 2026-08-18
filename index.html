@@ -5,8 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pandorax</title>
   <link rel="stylesheet" href="assets/styles.css">
-  <link rel="icon" href="assets/webstuff/pandoraxO">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="icon" type="image/png" href="assets/webstuff/favicon.png">
   <style>
     @import url('https://fonts.cdnfonts.com/css/poppins');
   </style>
@@ -72,16 +71,16 @@
 
 
   <section id="contact" style="display: flex; flex-direction: column; align-items: center;">
-    <h4 id="fif">Prepared and taught by 50+ high-performing high school/college students <span style="color:#00FF82">worldwide.</h2>
-    <p id="ptext"  id="fift">Our projects and programs are prepared and taught by an international team of 50+ quality instructors from top high schools and universities, including MIT, Stanford, and Caltech, having all received national or international recognition in prestigious STEM competitions. With our large, highly experienced staff team, Pandorax is dedicated to promoting the next generation of scientists and innovators. And it starts with you.</p>
+    <h4 class="fif">Prepared and taught by 50+ high-performing high school/college students <span style="color:#00FF82">worldwide.</span></h4>
+    <p id="ptext">Our projects and programs are prepared and taught by an international team of 50+ quality instructors from top high schools and universities, including MIT, Stanford, and Caltech, having all received national or international recognition in prestigious STEM competitions. With our large, highly experienced staff team, Pandorax is dedicated to promoting the next generation of scientists and innovators. And it starts with you.</p>
     <div id="ppl" style="position:absolute; z-index:-1; display: flex;">
       <img id="pplimg" src="assets/webstuff/ppl.png" >
     </div>
   </section>
 
   <section class="test" style="display: flex; flex-direction: column; align-items: center;">
-    <h4 id="fif">Trusted by students around the world.</h6>
-    <p id="bsm">Here is what our students say about our Olympiad bootcamps.</p>
+    <h4 class="fif">Trusted by students around the world.</h4>
+    <p class="bsm">Here is what our students say about our Olympiad bootcamps.</p>
     <div class="testone" style="display: flex; flex-direction: row; align-items:  center;"><div id="tone">This bootcamp has been an absolutely incredible experience. The instructors, the course materials, and the support system provided have all exceeded my expectations. In just 9 days, I've gained more knowledge than I would in an entire month of dedicated effort. Every instructor displayed a profound mastery of their subject matter, effectively conveying their expertise and ensuring clarity in their teachings. Overall, I can confidently say that this program has been nothing short of amazing. Whether you're a beginner or an experienced learner, I wholeheartedly recommend participating in this program not only for the preparation but also for the knowledge that you will gain!
       <p style="color: #fff; padding-top: 30px; text-align: right; font-weight: bold;">Yash Rajput, <span style="color: #5FA4FF;">USESO Bootcamp student</span></p></div>
     <div id="ttwo">Pandorax USABO Bootcamp was beneficial to my studies in biology. The instructors made the classes engaging and informative and made hard concepts easy to understand. The instructors were also very supportive, and willing to give us help whenever we needed it. They would also upload recordings, which was tremendously useful for reviewing. It had been a dream to make USABO semifinals my first year of high school since middle school, and it probably would not have happened without their class!
@@ -100,8 +99,8 @@
   
 
   <section id="thingy" style="display: flex; flex-direction: column; align-items: center;">
-    <p id="bsm" >We will guide you, step by step, from a dreamer to a doer.</p>
-    <h5 id="bsbg">Open Pandora's box now.</h3>
+    <p class="bsm" >We will guide you, step by step, from a dreamer to a doer.</p>
+    <h5 id="bsbg">Open Pandora's box now.</h5>
     <div id="container">
       <a href="projects.html">
         <button class="btn" >Get Started</button>
@@ -114,7 +113,6 @@
   </section>
 
 
-  <script src="assets/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script>
@@ -131,31 +129,6 @@
   
     // Attach the scroll event listener
     window.addEventListener('scroll', handleScroll);
-  </script>
-  <script>
-  $(document).ready(function() {
-  
-    $(window).scroll(function() {
-      var scroll = $(window).scrollTop();
-      if (scroll >= 1) {
-        $('.arrow').addClass('fade');
-      } else{
-        $('.arrow').removeClass('fade');
-      }
-    })
-  });
-  </script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-  const e = document.getElementById('frf');
-
-  e.addEventListener('click', function() {
-    window.scrollTo({
-      top: document.body.scrollHeight,
-      behavior: 'smooth'
-    });
-  });
-});
   </script>
   <script>
     document.addEventListener("DOMContentLoaded", (event) => {
@@ -368,7 +341,7 @@
       }
     );
 
-    gsap.fromTo("#fif", 
+    gsap.fromTo(".fif", 
       {
         opacity: 0,
         x: -400
@@ -379,7 +352,7 @@
         duration: 0.5,
         ease: "power1.inOut",
         scrollTrigger: {
-          trigger: "#fif",
+          trigger: ".fif",
           start: "top 80%",
           end: "top 50%", 
         }

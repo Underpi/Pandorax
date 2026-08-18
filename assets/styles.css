@@ -29,11 +29,12 @@ margin-left: 50px;
 }
 
 #yoop, #prod, #prog, #te, #cont {
+transition: transform 0.2s ease, border-color 0.2s ease;
 color: #fff;
 background-color: transparent;
 border: 1px solid transparent;
 padding: 10px 30px;
-margin-top: 25px;
+margin-top: 30px;
 margin-bottom: 50px;
 font-size: 110%;
 font-family: 'Poppins', sans-serif;
@@ -43,6 +44,7 @@ font-family: 'Poppins', sans-serif;
 #yoop:hover, #prod:hover, #prog:hover, #te:hover, #cont:hover {
 border-bottom: 1px solid #fff;
 cursor: pointer;
+transform: translateY(-2px);
 }
 
 .head {
@@ -70,7 +72,7 @@ body {
 
 #grad:hover {
     box-shadow: 0 6px 22px #ea16ea73;
-    transform: translateY(-2px);
+    transform: translateY(-2px) scale(1.05);
 }
 
   
@@ -228,6 +230,15 @@ h1 {
   height: 387px;
   width: 323px;
   margin-bottom: 40vh;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* GSAP leaves an inline transform on these, which outranks a plain rule here */
+#aa:hover, #es:hover, #b:hover, #c:hover {
+  transform: translateY(-8px) scale(1.04) !important;
+  box-shadow: 0 14px 36px #00000099;
 }
 
 
@@ -294,7 +305,7 @@ h2 {
 .hero-cta-secondary:hover {
   background-color: #ffffff29;
   border-color: #ffffffbf;
-  transform: translateY(-2px);
+  transform: translateY(-2px) scale(1.05);
 }
 
 #dbt {
@@ -333,7 +344,7 @@ p {
   line-height: 1.4;
 }
 
-#bsm {
+.bsm {
   font-size: 160%; 
   text-align: center; 
   color:#fff
@@ -342,7 +353,7 @@ p {
 #bsbg {
   font-size: 400%; 
   text-align: center; 
-  color:#fff;
+  color:#f0e2ff;
   font-weight: 600;
 }
 
@@ -450,6 +461,30 @@ p {
   filter: brightness(70%)
 }
 
+/* closing call to action, boxed so it reads as its own section */
+#thingy {
+  max-width: 1100px;
+  width: calc(100% - 48px);
+  margin-inline: auto;
+  margin-bottom: 12vh;
+  padding: 9vh 5vw 0;
+  border: 1px solid #6b3fb5;
+  border-radius: 24px;
+  background-image: linear-gradient(180deg, #191030 0%, #0d0818 100%);
+  box-shadow:
+    0 0 12px rgba(161, 54, 227, 0.55),
+    0 0 40px rgba(161, 54, 227, 0.35),
+    0 0 90px rgba(124, 58, 237, 0.22);
+}
+
+#thingy #container {
+  padding-block: 4vh 0;
+}
+
+#thingy .btn {
+  margin-bottom: 7vh;
+}
+
 /* get started button */
 #container {
   text-align: center;
@@ -470,6 +505,17 @@ p {
   color: #fff;
   background-image: linear-gradient(241deg, #189FFD, #AE63E8);
   border: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px) scale(1.06);
+  box-shadow: 0 12px 30px #189ffd59;
+  filter: brightness(110%);
+}
+
+.btn:active {
+  transform: translateY(-1px) scale(1.02);
 }
 
 .btna {
@@ -504,18 +550,27 @@ html {
 }
 
   #tone, #ttwo, #tthree, #tfour, #tfive, #tsix {
-    background-image: linear-gradient(#1c181f 8%, black 92%);
+    background-image: linear-gradient(160deg, #1f1a26 0%, #120e18 100%);
     width: 500px;
     padding: 100px 50px;
     justify-content: space-between ;
     border-width: 2px;
     border-style: solid;
-    border-radius: 6px;
+    border-radius: 16px;
     border-color: #fff;
-    border: none;
+    border: 1px solid #2f2740;
+    box-shadow: 0 10px 34px #00000073;
     line-height: 1.4;
     color: #e9e8e9;
     font-weight: 530;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  }
+
+  /* same inline-transform clash as the guide cards above */
+  #tone:hover, #ttwo:hover, #tthree:hover, #tfour:hover, #tfive:hover, #tsix:hover {
+    transform: translateY(-6px) !important;
+    border-color: #a136e3;
+    box-shadow: 0 18px 44px #00000099;
   }
 
   .testone, .testtwo, .testthree {
@@ -525,6 +580,8 @@ html {
   .test {
     gap: 50px;
     margin-bottom: 100px;
+    padding-block: 9vh;
+    background-image: linear-gradient(180deg, #00000000 0%, #0a0813 14%, #0a0813 86%, #00000000 100%);
   }
 
   /* Your existing styles */
@@ -596,6 +653,12 @@ html {
     #dbt {
       font-size: 12px;
       padding-inline: 30px; }
+
+    /* base .oly is padding-top: 60vh to clear the dream-big art, but that art
+       is only ~110px tall on phones, so 60vh is dead black space */
+    .oly {
+      padding-top: 16vh;
+    }
  
     #dreambigimg4 {
       height: 80px; 
@@ -623,7 +686,8 @@ html {
     
     /* ppl */
     #contact {
-      margin-top: 30vh;
+      margin-top: 8vh;
+      position: relative;
     }
 
     h4, #ptext {
@@ -637,16 +701,31 @@ html {
       height: auto
     } */
 
+    /* the desktop art is a 4500px square pulled up by translateY(-35vh);
+       on phones anchor it to the top of #contact instead so it fills the
+       black space behind the copy rather than being hidden */
+    #ppl {
+      top: 0;
+      left: 50%;
+      width: 150vw;
+      justify-content: center;
+      transform: translateX(-50%);
+    }
+
     #pplimg {
-      display: none;
+      width: 100%;
+      height: auto;
+      opacity: 30%;
+      transform: none;
     }
 
     /* button stuff */
+    /* the art is anchored to #contact here, so the desktop runway is dead space */
     #ptext {
-      padding-bottom: 50vh;
+      padding-bottom: 12vh;
     }
 
-    #bsm, #bsbg {
+    .bsm, #bsbg {
       width: 350px;
     }
 
@@ -671,6 +750,16 @@ html {
     #tone, #ttwo, #tthree, #tfour, #tfive, #tsix {
       width: 100%;
       padding: 32px 20px;
+    }
+
+    #thingy {
+      width: calc(100% - 32px);
+      padding: 6vh 24px 0;
+      border-radius: 18px;
+    }
+
+    .test {
+      padding-block: 6vh;
     }
 
     /* Add more responsive styles as needed */
@@ -737,3 +826,20 @@ html {
       max-width: 500px;
     }
   }
+
+/* users who ask for less motion get the colour changes without the movement */
+@media (prefers-reduced-motion: reduce) {
+  #yoop, #prod, #prog, #te, #cont,
+  .hero-cta, .btn,
+  #aa, #es, #b, #c,
+  #tone, #ttwo, #tthree, #tfour, #tfive, #tsix {
+    transition: none;
+  }
+
+  #yoop:hover, #prod:hover, #prog:hover, #te:hover, #cont:hover,
+  #grad:hover, .hero-cta-secondary:hover, .btn:hover,
+  #aa:hover, #es:hover, #b:hover, #c:hover,
+  #tone:hover, #ttwo:hover, #tthree:hover, #tfour:hover, #tfive:hover, #tsix:hover {
+    transform: none !important;
+  }
+}
