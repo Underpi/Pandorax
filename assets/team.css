@@ -247,7 +247,7 @@ html {
 
 @media only screen and (max-width: 768px) {
   body {
-      font-size: 10px
+      font-size: 15px
   }
 
   header {
@@ -287,7 +287,76 @@ html {
       font-size: 13px;
     }
 
+    /* people cards. The desktop sizes are fixed px (.profile-card 403x761,
+       its image 403x397, .bottomprof calc(33.3% - 40px) with a 127px image)
+       and overflow a phone, which forced the whole page to shrink-to-fit. */
+
+  .content {
+      padding-inline: 24px;
+      padding-block: 10vh;
+    }
+
+  h1 {
+      font-size: 230%;
+      padding-top: 8vh;
+    }
+
+  .profile-card {
+      width: 100%;
+      max-width: 403px;
+      height: auto;
+    }
+
+  .profile-card img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 403 / 397;
+    }
+
+  .profile-details h2,
+  .profile-details p {
+      padding-inline: 20px;
+    }
+
+  .profile-details h2 {
+      margin-bottom: 16px;
+    }
+
+  .social-details {
+      margin-left: 20px;
+      margin-bottom: 20px;
+    }
+
+  .writers {
+      gap: 28px;
+    }
+
+  .bottomprof {
+      width: 100%;
+      margin-bottom: 8px;
+    }
+
+  .bottomprof img {
+      width: 96px;
+      height: 96px;
+      margin-right: 20px;
+    }
+
     
 
 
   }
+/* tablet + small laptop: 3-up leaves too little room beside the 127px avatar
+   (a .bottomprof box is 185px at 769px but the image plus its margin needs
+   167px), so the writer text spilled out of its own card onto the next
+   person. Two per row until the 3-up columns are wide enough. */
+
+@media only screen and (min-width: 769px) and (max-width: 1280px) {
+  .bottomprof {
+      width: calc(50% - 30px);
+    }
+
+  .bottomprof img {
+      margin-right: 24px;
+    }
+}
