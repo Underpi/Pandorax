@@ -3,7 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pandorax</title>
+  <title>Pandorax — Free Olympiad Guides &amp; STEM Bootcamps</title>
+  <meta name="description" content="Free Olympiad guides and live bootcamps for high school STEM competitors, built by a team of 50+ national and international medalists.">
+  <link rel="canonical" href="https://pandorax.org/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Pandorax">
+  <meta property="og:title" content="Pandorax — Free Olympiad Guides &amp; STEM Bootcamps">
+  <meta property="og:description" content="Free Olympiad guides and live bootcamps for high school STEM competitors, built by a team of 50+ national and international medalists.">
+  <meta property="og:url" content="https://pandorax.org/">
+  <meta property="og:image" content="https://pandorax.org/assets/webstuff/pandorax_new_logo.png">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="assets/styles.css">
   <link rel="icon" type="image/png" href="assets/webstuff/favicon.png">
   <style>
@@ -17,17 +26,30 @@
   </video>
   <header>
     <div class="head" style="padding-bottom: 2vh">
-      <div><img id="logo" src="assets/webstuff/pandorax_new_logo.png" /> </div>
+      <div><img id="logo" src="assets/webstuff/pandorax_new_logo.png" alt="Pandorax" /> </div>
       <a href="index.html"><button id="yoop">Home</button></a>
       <!-- <a href="index.html"><img id="logo" src="assets/webstuff/pandorax_new_logo.png" /></a> -->
       <a href="projects.html"><button id="prod">Projects</button></a>
-      <a href="programs.html"><button id="prog">Programs</button></a>
+      <div class="navdrop">
+        <a href="programs.html"><button id="prog">Programs</button></a>
+        <div class="navmenu">
+          <a href="naclobootpage.html">NACLO Bootcamp</a>
+          <a href="usabobootpage.html">USABO Bootcamp</a>
+          <a href="usaphobootpage.html">USAPhO Bootcamp</a>
+          <a href="usncobootpage.html">USNCO Bootcamp</a>
+          <a href="usesobootpage.html">USESO Bootcamp</a>
+          <a href="usaaaobootpage.html">USAAAO Bootcamp</a>
+          <a href="mlbootpage.html">Machine Learning Research</a>
+        </div>
+      </div>
+      <a href="impact.html"><button id="imp">Impact</button></a>
       <a href="team.html"><button id="te">Our Team</button></a>
       <a href="contact.html"><button id="cont">Contact</button></a>
   </div>
   </header>
 
 <div class="containter2">
+ <section class="heroblock">
   <div class="hero-row" style="display: flex; justify-content: center; align-items: center; margin-top: 50px;">
     <h6 class="poppins-regular hero-title">Turn Your</h6>
     <img src="assets/webstuff/nlogo.png" class="hero-mark" alt="Logo" />
@@ -40,21 +62,23 @@
   <a href="projects.html"><button id="grad" class="poppins-regular hero-cta">Get Started</button></a>
   <a href="team.html"><button class="poppins-regular hero-cta hero-cta-secondary">Learn More</button></a>
  </div>
+ </section>
 
 
-  <section id="about" style="margin-top: 70vh; position:relative; display: flex; flex-direction: column; align-items: center;">
+  <section id="about" style="position:relative; display: flex; flex-direction: column; align-items: center;">
     <div style=" z-index:999; display: flex; flex-direction: column; align-items: center;">
       <h2 id="dreambig" >Dream Big.</h2>
       <p  id="dbt" d>Ever wanted to qualify to compete in the International Biology Olympiad, which sets you up for a path of success as a future doctor? Or to win at the International Science and Engineering Fair which brings you one step closer to becoming a future scientist or innovator? You need resources and mentorship to help you reach your dreams. Regardless, cast your wide net far beyond the horizon — because we got you covered. </p>
     </div>
     <div id="dbi"   style="position:absolute; z-index:-1;">
-      <img id="dreambigimg3" src="assets/webstuff/indbg5.png">
-      <img id="dreambigimg4" src="assets/webstuff/indbg4.png">
-      <img id="dreambigimg2" src="assets/webstuff/indbg2.png" >
-      <img id="dreambigimg5" src="assets/webstuff/indbg3.png" >
+      <img id="dreambigimg3" src="assets/webstuff/indbg5.png" alt="">
+      <img id="dreambigimg4" src="assets/webstuff/indbg4.png" alt="">
+      <img id="dreambigimg2" src="assets/webstuff/indbg2.png" alt="">
+      <img id="dreambigimg5" src="assets/webstuff/indbg3.png" alt="">
     </div>
   </section>
 
+  <section class="guidesband">
   <div class="stuff">
     <section class="oly" style="display: flex; flex-direction: column; align-items: center;">
     <h3 class="guides-heading">Guides</h3>
@@ -63,23 +87,24 @@
   </div>
 
   <div class = "woweza card-container" >
-    <img id="aa"    src="assets/webstuff/usaaao_guide.png">
-    <img id="es"   src="assets/webstuff/useso_guide.png">
-    <img id="b"   src="assets/webstuff/usabo_guide.png">
-    <img id="c"   src="assets/webstuff/calculus_primer.png">
+    <a href="https://usaaao.guide"><img id="aa"    src="assets/webstuff/usaaao_guide.png" alt="USAAAO Guide"></a>
+    <a href="https://useso.guide"><img id="es"   src="assets/webstuff/useso_guide.png" alt="USESO Guide"></a>
+    <a href="https://www.bioly.guide"><img id="b"   src="assets/webstuff/usabo_guide.png" alt="USABO Guide"></a>
+    <a href="https://calc.guide"><img id="c"   src="assets/webstuff/calculus_primer.png" alt="Calculus Primer"></a>
   </div>
+  </section>
 
 
   <section id="contact" style="display: flex; flex-direction: column; align-items: center;">
     <h4 class="fif">Prepared and taught by 50+ high-performing high school/college students <span style="color:#00FF82">worldwide.</span></h4>
     <p id="ptext">Our projects and programs are prepared and taught by an international team of 50+ quality instructors from top high schools and universities, including MIT, Stanford, and Caltech, having all received national or international recognition in prestigious STEM competitions. With our large, highly experienced staff team, Pandorax is dedicated to promoting the next generation of scientists and innovators. And it starts with you.</p>
     <div id="ppl" style="position:absolute; z-index:-1; display: flex;">
-      <img id="pplimg" src="assets/webstuff/ppl.png" >
+      <img id="pplimg" src="assets/webstuff/ppl.jpg" alt="Collage of Pandorax instructors and students">
     </div>
   </section>
 
   <section class="test" style="display: flex; flex-direction: column; align-items: center;">
-    <h4 class="fif">Trusted by students around the world.</h4>
+    <h4 class="fif">Bootcamps trusted by students around the world.</h4>
     <p class="bsm">Here is what our students say about our Olympiad bootcamps.</p>
     <div class="testone" style="display: flex; flex-direction: row; align-items:  center;"><div id="tone">This bootcamp has been an absolutely incredible experience. The instructors, the course materials, and the support system provided have all exceeded my expectations. In just 9 days, I've gained more knowledge than I would in an entire month of dedicated effort. Every instructor displayed a profound mastery of their subject matter, effectively conveying their expertise and ensuring clarity in their teachings. Overall, I can confidently say that this program has been nothing short of amazing. Whether you're a beginner or an experienced learner, I wholeheartedly recommend participating in this program not only for the preparation but also for the knowledge that you will gain!
       <p style="color: #fff; padding-top: 30px; text-align: right; font-weight: bold;">Yash Rajput, <span style="color: #5FA4FF;">USESO Bootcamp student</span></p></div>
@@ -103,7 +128,10 @@
     <h5 id="bsbg">Open Pandora's box now.</h5>
     <div id="container">
       <a href="projects.html">
-        <button class="btn" >Get Started</button>
+        <button class="btn">Get Started</button>
+      </a>
+      <a href="https://discord.gg/UJBbPNHNEW" target="_blank" rel="noopener">
+        <button class="btn btnsecondary">Join the Discord for more info</button>
       </a>
     </div>
   </section>
@@ -122,13 +150,16 @@
     // Calculate the opacity based on scroll position
     function handleScroll() {
       const scrollPercent = (window.scrollY / window.innerHeight);
-      const opacity = 0.6 - scrollPercent; // Adjust this factor to control the fading speed
+      const opacity = Math.max(0, 0.6 - scrollPercent); // Adjust this factor to control the fading speed
 
       homeBackground.style.opacity = opacity;
     }
   
     // Attach the scroll event listener
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    // Set the correct opacity for the current scroll position (refresh mid-page, back button)
+    handleScroll();
   </script>
   <script>
     document.addEventListener("DOMContentLoaded", (event) => {
@@ -397,11 +428,11 @@
     gsap.fromTo("#tone", 
       {
         opacity: 0,
-        x: -400
+        y: 40
       }, 
       {
         opacity: 1,
-        x: 0, 
+        y: 0, 
         duration: 0.5,
         ease: "power1.inOut",
         scrollTrigger: {
@@ -414,11 +445,11 @@
     gsap.fromTo("#ttwo", 
       {
         opacity: 0,
-        x: -400
+        y: 40
       }, 
       {
         opacity: 1,
-        x: 0, 
+        y: 0, 
         duration: 0.5,
         ease: "power1.inOut",
         scrollTrigger: {
@@ -431,11 +462,11 @@
     gsap.fromTo("#tthree", 
       {
         opacity: 0,
-        x: -400
+        y: 40
       }, 
       {
         opacity: 1,
-        x: 0, 
+        y: 0, 
         duration: 0.5,
         ease: "power1.inOut",
         scrollTrigger: {
@@ -448,11 +479,11 @@
     gsap.fromTo("#tfour", 
       {
         opacity: 0,
-        x: -400
+        y: 40
       }, 
       {
         opacity: 1,
-        x: 0, 
+        y: 0, 
         duration: 0.5,
         ease: "power1.inOut",
         scrollTrigger: {
@@ -465,11 +496,11 @@
     gsap.fromTo("#tfive", 
       {
         opacity: 0,
-        x: -400
+        y: 40
       }, 
       {
         opacity: 1,
-        x: 0, 
+        y: 0, 
         duration: 0.5,
         ease: "power1.inOut",
         scrollTrigger: {
@@ -482,11 +513,11 @@
     gsap.fromTo("#tsix", 
       {
         opacity: 0,
-        x: -400
+        y: 40
       }, 
       {
         opacity: 1,
-        x: 0, 
+        y: 0, 
         duration: 0.5,
         ease: "power1.inOut",
         scrollTrigger: {

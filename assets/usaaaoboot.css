@@ -1,0 +1,546 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  
+body {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+
+  }
+
+
+.crazy {
+    display: flex; 
+    justify-content: center;
+}
+
+#logo {
+  position: absolute;
+  width: 150px;
+  height: 93.75;
+  left: 0;
+  margin-left: 50px;
+}
+
+#yoop, #prod, #prog, #imp, #te, #cont {
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 10px 30px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  font-size: 110%;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+#yoop:hover, #prod:hover, #prog:hover, #imp:hover, #te:hover, #cont:hover {
+  border-bottom: 1px solid #fff;
+  cursor: pointer;
+}
+
+.head {
+    display: flex; 
+    justify-content: center;
+    flex-direction: row;
+    align-items: under;
+    justify-content: space-between 4px;
+    gap: 3px;
+}
+
+body {
+  background-color: #5c1328;
+}
+
+
+ul {
+  list-style-position: inside;
+  line-height: 110%;
+}
+
+
+  
+  
+  
+  
+  
+
+  .break {
+    flex-basis: 100%;
+    height: 0;
+  }
+
+  html {
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+  ::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+  }
+  /* Optional: show position indicator in red */
+  ::-webkit-scrollbar-thumb {
+    background: #FF0000;
+  }
+
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-block: 12vh;
+  }
+
+
+@media only screen and (max-width: 768px) {
+  body {
+      font-size: 10px
+  }
+
+  header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 0;
+    }
+    
+  #logo {
+      position: static;
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: 0;
+      width: 110px;
+
+    }
+    
+  .head {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 4px 2px;
+    }
+    
+  .head > div:first-child {
+      flex: 0 0 100%;
+      display: flex;
+      justify-content: center;
+    }
+    
+  #yoop, #prod, #prog, #imp, #te, #cont {
+      margin-top: 8px;
+      margin-bottom: 12px;
+      padding: 14px 10px;
+      font-size: 13px;
+    }
+
+    
+
+
+  }
+
+  .copyright {
+    margin-bottom: 3vh;
+    display: flex;
+    justify-content: center;
+  }
+
+/* the absolute logo lands on top of the centered nav below ~1100px, so drop
+   it onto its own row the same way the phone layout does */
+@media only screen and (min-width: 769px) and (max-width: 1100px) {
+  .head {
+    flex-wrap: wrap;
+  }
+
+  .head > div:first-child {
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  #logo {
+    position: static;
+    margin-left: 0;
+    width: 130px;
+  }
+}
+
+
+/* Programs nav dropdown — links straight to each bootcamp page.
+   .navdrop carries the nav button's vertical margins so the menu can sit flush
+   under the button with no hover gap. Do not move them back onto #prog, and do
+   not drop align-self: flex-start — .head stretches its items otherwise, which
+   would push the menu to the bottom of the whole nav bar. */
+.navdrop {
+  position: relative;
+  display: inline-flex;
+  align-self: flex-start;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.navdrop #prog {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.navmenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 240px;
+  padding: 8px 0;
+  background-color: #0a0a0a;
+  border: 1px solid #262626;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px #000000a6;
+  z-index: 999;
+}
+
+.navdrop:hover .navmenu,
+.navdrop:focus-within .navmenu {
+  display: block;
+}
+
+.navmenu a {
+  display: block;
+  padding: 10px 18px;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 95%;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.navmenu a:hover {
+  background-color: #1c1c1c;
+}
+
+@media only screen and (max-width: 768px) {
+  .navdrop {
+    margin-top: 8px;
+    margin-bottom: 12px;
+  }
+
+  /* touch devices have no hover; the Programs page already lists every bootcamp */
+  .navdrop:hover .navmenu,
+  .navdrop:focus-within .navmenu {
+    display: none;
+  }
+}
+
+
+/* Instructor card with no photo yet. .profile-card's fixed height assumes a
+   377px image on top, so without one the card is mostly empty space. When the
+   photo arrives, drop an <img> in and delete the nophoto class. */
+
+/* ---- bootcamp page layout ---------------------------------------------
+   Replaces the old fixed-width design. The previous rules used
+   margin-inline: 25vw on .description (≈195px of text on a phone) and a
+   371x478.8px .profile-card that overflowed a phone viewport, with no mobile
+   override for either. Accent #f5366c is this bootcamp's colour; the card fill
+   keeps the page's identity. */
+
+h1 {
+  max-width: 900px;
+  margin-inline: auto;
+  padding-block: 6vh 3vh;
+  padding-inline: 24px;
+  text-align: center;
+  font-size: 400%;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+/* Key facts lifted out of the prose so schedule and cost read at a glance. */
+.factrow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+  max-width: 780px;
+  margin-inline: auto;
+  margin-bottom: 30px;
+  padding-inline: 24px;
+}
+
+.fact {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 16px 18px;
+  background-color: #ffffff0f;
+  border: 1px solid #ffffff24;
+  border-radius: 12px;
+}
+
+.factlabel {
+  color: #f5366c;
+  font-size: 80%;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.factvalue {
+  line-height: 1.4;
+}
+
+.description {
+  max-width: 780px;
+  margin-inline: auto;
+  padding: 34px 38px;
+  background-color: #ffffff0f;
+  border: 1px solid #ffffff24;
+  border-radius: 16px;
+  line-height: 1.65;
+}
+
+.description h2 {
+  margin-bottom: 8px;
+  color: #f5366c;
+  font-size: 115%;
+  font-weight: 600;
+}
+
+.description p,
+.description ul {
+  margin-bottom: 26px;
+}
+
+.description ul {
+  list-style-position: outside;
+  padding-left: 20px;
+  line-height: 1.65;
+}
+
+.description > :last-child {
+  margin-bottom: 0;
+}
+
+h3 {
+  padding-block: 9vh 4vh;
+  text-align: center;
+  font-size: 230%;
+  font-weight: 600;
+}
+
+/* Past instructors are secondary: smaller heading, outlined cards. */
+.pasthead {
+  padding-block: 7vh 3vh;
+  font-size: 165%;
+  opacity: 0.9;
+}
+
+/* Grid, not flex with fixed-width cards. auto-fit means any number of
+   instructors lays out on its own, and a card with no photo simply has no
+   image box — which is why the old .nophoto workaround is gone. */
+.executive {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 26px;
+  max-width: 1080px;
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+
+.executive.past {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 18px;
+  max-width: 900px;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: #153e4c;
+  color: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 10px 26px #0000004d;
+}
+
+.executive.past .profile-card {
+  background-color: #ffffff0f;
+  color: #ffffff;
+  border: 1px solid #ffffff26;
+  box-shadow: none;
+}
+
+.profile-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.profile-details {
+  padding: 24px 26px;
+}
+
+.profile-details h2 {
+  margin-bottom: 6px;
+  font-size: 130%;
+  font-weight: 600;
+}
+
+.executive.past .profile-details {
+  padding: 18px 20px;
+}
+
+.executive.past .profile-details h2 {
+  font-size: 108%;
+}
+
+.executive.past .profile-details ul {
+  font-size: 90%;
+}
+
+#bruh {
+  padding: 14px 34px;
+  color: #14100f;
+  background-color: #f5366c;
+  border: none;
+  border-radius: 12px;
+  font-size: 110%;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  margin-block: 12vh;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+#bruh:hover {
+  filter: brightness(108%);
+  transform: translateY(-2px);
+}
+
+/* Phone sizes are explicit px: the 768px query sets body { font-size: 10px },
+   so percentages resolve against that and gave 9px description text before. */
+@media only screen and (max-width: 768px) {
+  h1 {
+    padding-block: 4vh 2vh;
+    padding-inline: 16px;
+    font-size: 30px;
+  }
+
+  .factrow {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 22px;
+    padding-inline: 16px;
+  }
+
+  .factlabel { font-size: 11px; }
+  .factvalue { font-size: 15px; }
+
+  .description {
+    margin-inline: 16px;
+    padding: 22px 20px;
+    font-size: 15px;
+  }
+
+  .description h2 { font-size: 17px; }
+
+  h3 {
+    padding-block: 6vh 3vh;
+    font-size: 24px;
+  }
+
+  .pasthead { font-size: 19px; }
+
+  .executive,
+  .executive.past {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding-inline: 16px;
+  }
+
+  .profile-details { padding: 20px 22px; }
+  .profile-details h2 { font-size: 19px; }
+  .profile-details ul { font-size: 14px; }
+
+  #bruh {
+    margin-block: 0;
+    padding: 13px 30px;
+    font-size: 16px;
+  }
+}
+
+.discord {
+  margin-top: 20px;
+  padding-inline: 24px;
+  color: #ffffffb8;
+  font-size: 95%;
+  text-align: center;
+}
+
+.discord a {
+  color: #f5366c;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid #f5366c59;
+  transition: border-color 0.2s ease;
+}
+
+.discord a:hover {
+  border-bottom-color: #f5366c;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    padding-block: 8vh;
+  }
+
+  .discord {
+    margin-top: 16px;
+    padding-inline: 20px;
+    font-size: 14px;
+  }
+}
+
+
+/* Keyboard focus. Only two :focus-visible rules existed across the whole site,
+   so tabbing through the nav, the cards or most buttons gave no visible
+   position. The dark ring sits outside the white one so the indicator stays
+   legible on light surfaces too (the USAPhO card, the Learn More buttons).
+   :focus-visible, not :focus, so mouse clicks do not draw it. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 5px #000000a6;
+}
+
+/* the nav buttons already move on hover; matching that on focus keeps the two
+   states consistent for keyboard and mouse */
+#yoop:focus-visible,
+#prod:focus-visible,
+#prog:focus-visible,
+#imp:focus-visible,
+#te:focus-visible,
+#cont:focus-visible {
+  border-bottom-color: #ffffff;
+}
+
+/* the dropdown opens on focus-within already; this makes the focused entry
+   inside it obvious */
+.navmenu a:focus-visible {
+  background-color: #1c1c1c;
+  outline-offset: -2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  a:focus-visible,
+  button:focus-visible {
+    transition: none;
+  }
+}
