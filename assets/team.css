@@ -31,7 +31,7 @@
   margin-left: 50px;
 }
 
-#yoop, #prod, #prog, #te, #cont {
+#yoop, #prod, #prog, #imp, #te, #cont {
   color: #fff;
   background-color: transparent;
   border: 1px solid transparent;
@@ -50,7 +50,7 @@
 }
 
 
-#yoop:hover, #prod:hover, #prog:hover, #te:hover, #cont:hover {
+#yoop:hover, #prod:hover, #prog:hover, #imp:hover, #te:hover, #cont:hover {
   border-bottom: 1px solid #fff;
   cursor: pointer;
 }
@@ -205,14 +205,6 @@ ul {
   margin-bottom: 30px;
 }
 
-.social-details {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  margin-left: 30px;
-}
 
 
 
@@ -286,7 +278,7 @@ html {
       justify-content: center;
     }
     
-  #yoop, #prod, #prog, #te, #cont {
+  #yoop, #prod, #prog, #imp, #te, #cont {
       margin-top: 8px;
       margin-bottom: 12px;
       padding: 14px 10px;
@@ -328,10 +320,6 @@ html {
       margin-bottom: 16px;
     }
 
-  .social-details {
-      margin-left: 20px;
-      margin-bottom: 20px;
-    }
 
   .writers {
       gap: 28px;
@@ -384,5 +372,180 @@ html {
     position: static;
     margin-left: 0;
     width: 130px;
+  }
+}
+
+
+/* Programs nav dropdown — links straight to each bootcamp page.
+   .navdrop carries the nav button's vertical margins so the menu can sit flush
+   under the button with no hover gap. Do not move them back onto #prog, and do
+   not drop align-self: flex-start — .head stretches its items otherwise, which
+   would push the menu to the bottom of the whole nav bar. */
+.navdrop {
+  position: relative;
+  display: inline-flex;
+  align-self: flex-start;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.navdrop #prog {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.navmenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 240px;
+  padding: 8px 0;
+  background-color: #0a0a0a;
+  border: 1px solid #262626;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px #000000a6;
+  z-index: 999;
+}
+
+.navdrop:hover .navmenu,
+.navdrop:focus-within .navmenu {
+  display: block;
+}
+
+.navmenu a {
+  display: block;
+  padding: 10px 18px;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 95%;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.navmenu a:hover {
+  background-color: #1c1c1c;
+}
+
+@media only screen and (max-width: 768px) {
+  .navdrop {
+    margin-top: 8px;
+    margin-bottom: 12px;
+  }
+
+  /* touch devices have no hover; the Programs page already lists every bootcamp */
+  .navdrop:hover .navmenu,
+  .navdrop:focus-within .navmenu {
+    display: none;
+  }
+}
+
+
+/* Team roster bands. Every group sits in a .teamband; every second one adds
+   .teamband-alt for a purple wash, so the four groups alternate plain / tinted.
+   Painted on ::before behind the content so the portraits keep their own
+   treatment, with isolation: isolate keeping z-index:-1 inside the band rather
+   than sliding under the page background. */
+.teamband {
+  position: relative;
+  isolation: isolate;
+  padding-block: 2vh 5vh;
+}
+
+.teamband-alt::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    radial-gradient(ellipse 96% 74% at 50% 44%,
+      #4a1f8c3d 0%,
+      #4a1f8c26 30%,
+      #4a1f8c12 58%,
+      #4a1f8c00 100%),
+    linear-gradient(180deg,
+      #00000000 0%,
+      #0b081666 8%,
+      #0b0816 22%,
+      #0b0816 78%,
+      #0b081666 92%,
+      #00000000 100%);
+}
+
+@media only screen and (max-width: 768px) {
+  .teamband {
+    padding-block: 1vh 3vh;
+  }
+
+  .teamband-alt::before {
+    background-image:
+      radial-gradient(ellipse 150% 60% at 50% 45%,
+        #4a1f8c3d 0%,
+        #4a1f8c26 32%,
+        #4a1f8c00 100%),
+      linear-gradient(180deg,
+        #00000000 0%,
+        #0b081666 6%,
+        #0b0816 16%,
+        #0b0816 84%,
+        #0b081666 94%,
+        #00000000 100%);
+  }
+}
+
+
+/* The last band (Backend Team) ends the page, so its wash used to stop level
+   with the final row of people. The extra bottom padding lets the gradient
+   run on and fade out below them instead of cutting off at the last card. */
+.teamband-last {
+  padding-bottom: 20vh;
+}
+
+@media only screen and (max-width: 768px) {
+  .teamband-last {
+    padding-bottom: 12vh;
+  }
+}
+
+
+/* Keyboard focus. Only two :focus-visible rules existed across the whole site,
+   so tabbing through the nav, the cards or most buttons gave no visible
+   position. The dark ring sits outside the white one so the indicator stays
+   legible on light surfaces too (the USAPhO card, the Learn More buttons).
+   :focus-visible, not :focus, so mouse clicks do not draw it. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 5px #000000a6;
+}
+
+/* the nav buttons already move on hover; matching that on focus keeps the two
+   states consistent for keyboard and mouse */
+#yoop:focus-visible,
+#prod:focus-visible,
+#prog:focus-visible,
+#imp:focus-visible,
+#te:focus-visible,
+#cont:focus-visible {
+  border-bottom-color: #ffffff;
+}
+
+/* the dropdown opens on focus-within already; this makes the focused entry
+   inside it obvious */
+.navmenu a:focus-visible {
+  background-color: #1c1c1c;
+  outline-offset: -2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  a:focus-visible,
+  button:focus-visible {
+    transition: none;
   }
 }

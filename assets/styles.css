@@ -28,7 +28,7 @@ left: 0;
 margin-left: 50px;
 }
 
-#yoop, #prod, #prog, #te, #cont {
+#yoop, #prod, #prog, #imp, #te, #cont {
 transition: transform 0.2s ease, border-color 0.2s ease;
 color: #fff;
 background-color: transparent;
@@ -41,7 +41,7 @@ font-family: 'Poppins', sans-serif;
 }
 
 
-#yoop:hover, #prod:hover, #prog:hover, #te:hover, #cont:hover {
+#yoop:hover, #prod:hover, #prog:hover, #imp:hover, #te:hover, #cont:hover {
 border-bottom: 1px solid #fff;
 cursor: pointer;
 transform: translateY(-2px);
@@ -91,11 +91,45 @@ body {
   justify-content: center;
 }
 
+/* The collage is a background layer for this section. It used to be a fixed
+   1382px square offset by -35vh, which meant it never matched the section:
+   it ran out from under the copy on wide screens, left a black band before the
+   testimonials, and overflowed into them on phones. Sizing it to the section
+   box instead makes all three impossible at any viewport. */
 #pplimg {
   opacity: 50%;
-  width: 1382.4px;
-  height: 1382.4px;
-  transform: translateY(-35vh);
+  width: 100%;
+  height: 100%;
+  /* contain, not cover: ppl.png is a 4500x4500 square with a transparent
+     silhouette, and this section is roughly 1.8:1. cover scales the square to
+     fill the box and crops ~324px off the top and bottom, squaring off the
+     collage. contain keeps the whole shape and still cannot overflow. */
+  object-fit: contain;
+  transform: none;
+}
+
+#ppl {
+  inset: 0;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+/* clearance from the guide cards above; overflow clips the art to the section */
+/* The people photo is an absolutely-positioned backdrop filling this section,
+   so the section needs its own height and the copy needs centring over it.
+   The height used to come from #ptext's padding-bottom: 100vh, which left the
+   text stranded at the top of a very tall block. */
+#contact {
+  position: relative;
+  overflow: hidden;
+  margin-top: 90px;
+  /* contain sizes the square collage to the shorter side of this box, so the
+     section height is what caps how large ppl.png can render */
+  min-height: 132vh;
+  justify-content: center;
+  padding-block: 12vh;
+  text-align: center;
 }
 
 @-moz-keyframes bounce {
@@ -188,7 +222,7 @@ body {
   height: 100%;
   object-fit: cover;
   background-color: #0b0a14;
-  opacity: 1; 
+  opacity: 0.6; 
   z-index: -1;
   transition: opacity 0.1s ease;
 }
@@ -229,7 +263,9 @@ h1 {
 #aa, #es, #b, #c {
   height: 387px;
   width: 323px;
-  margin-bottom: 40vh;
+  /* was 40vh — that is most of a screen of black between the guide cards
+     and the section below them */
+  margin-bottom: 14vh;
   border-radius: 8px;
   cursor: pointer;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -269,6 +305,7 @@ h2 {
 .hero-mark {
   width: 291px;
   height: 173px;
+  filter: drop-shadow(0 2px 14px rgba(0, 0, 0, 0.65));
 }
 
 .hero-sub {
@@ -317,10 +354,11 @@ h2 {
 }
 
 .oly {
-  font-size: 160%; 
+  font-size: 185%;
   padding-inline: 20vw;
-  
-  padding-top: 60vh;
+  /* clears the dream-big artwork above; 60vh was more runway than the art
+     needs and read as a large empty gap */
+  padding-top: 28vh;
   font-weight: 500;
 }
 
@@ -333,10 +371,11 @@ h4 {
 }
 
 #ptext {
-  font-size: 160%; 
+  font-size: 160%;
   padding-inline: 20vw;
-   
-  padding-bottom: 100vh; 
+  /* was padding-bottom: 100vh purely to give #contact its height — that is now
+     #contact's own min-height, so this no longer opens a screen-tall gap */
+  padding-bottom: 0;
   font-weight: 500;
 }
 
@@ -353,14 +392,14 @@ p {
 #bsbg {
   font-size: 400%; 
   text-align: center; 
-  color:#f0e2ff;
+  color:#fff;
   font-weight: 600;
 }
 
 
 
 .guides-heading {
-  font-size: 43px;
+  font-size: 56px;
   font-weight: 600;
   text-align: center;
   margin-bottom: 3vh;
@@ -374,29 +413,49 @@ p {
   margin-bottom: 10vh;
 }
 
+/* the covers are wrapped in links, so the link is the flex item and the
+   percentage widths below have to sit on it, not on the image */
+.card-container a {
+  display: block;
+}
 
+
+/* These were fixed 442-600px squares scattered with vw/vh transforms. That made
+   the row a hard 2092px wide (so the outer two were half off-screen below
+   1440px) and let the -24vh/+30vh offsets drift with window height until the
+   bottom circle pushed 216px down into the Guides section. Sizing them as a
+   share of the section and scattering in px keeps the look but bounds it. */
+#dreambigimg2,
+#dreambigimg3,
+#dreambigimg4,
+#dreambigimg5 {
+  /* 22% is the original proportion; the cap only bites above ~1900px so the
+     circles stay this size instead of growing on very wide monitors */
+  width: min(22%, 420px);
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: contain;
+  flex: none;
+}
+
+/* The original scattered arrangement. These offsets only stay inside the
+   section because #about now has a min-height big enough for the largest
+   circle plus the largest offset — see the comment there. Changing either
+   without the other is what let a circle spill into the section below. */
 #dreambigimg4 {
-  height: 442px; 
-  width: 442px; 
-  transform: translate(6vw, -24vh)
+  transform: translateY(-80px);
 }
 
 #dreambigimg3 {
-  height: 600px; 
-  width: 600px; 
-  transform: translate(0vw, -2vw)
+  transform: translateY(-25px);
 }
 
 #dreambigimg2 {
-  height: 550px; 
-  width: 550px; 
-  transform: translate(-1vw, 30vh)
+  transform: translateY(85px);
 }
 
 #dreambigimg5 {
-  height: 500px; 
-  width: 500px; 
-  transform: translate(-10vw, -22vh)
+  transform: translateY(-60px);
 }
 
 
@@ -458,7 +517,43 @@ p {
 
 #dbi {
   display: flex;
-  filter: brightness(70%)
+  filter: brightness(58%);
+  inset: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5vw;
+  /* overflow:hidden on the section would otherwise slice the circles flat
+     along the top and bottom edges */
+  -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 14%, #000 86%, transparent 100%);
+  mask-image: linear-gradient(180deg, transparent 0%, #000 14%, #000 86%, transparent 100%);
+}
+
+/* the section clips its own art, and the scrim keeps the copy readable where a
+   photo sits directly behind it (art is z-index -1, the copy is z-index 999) */
+#about {
+  overflow: hidden;
+  padding-block: 80px;
+  /* Largest circle is 420px, largest offset 85px, so the art reaches 295px
+     either side of centre = 590px total. 700px leaves 55px of clearance top
+     and bottom, which is what stops a circle spilling past overflow:hidden
+     into the section below. Raise this if the offsets ever grow. */
+  min-height: 700px;
+  justify-content: center;
+  /* scroll runway over the fixed hero video. Was an inline style, which no
+     media query could reach — that is why phones kept the full 70vh. */
+  margin-top: 70vh;
+}
+
+#about::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse 60% 55% at center,
+              rgba(10, 8, 19, 0.82) 0%,
+              rgba(10, 8, 19, 0.48) 60%,
+              rgba(10, 8, 19, 0.12) 100%);
 }
 
 /* closing call to action, boxed so it reads as its own section */
@@ -477,14 +572,6 @@ p {
     0 0 90px rgba(124, 58, 237, 0.22);
 }
 
-#thingy #container {
-  padding-block: 4vh 0;
-}
-
-#thingy .btn {
-  margin-bottom: 7vh;
-}
-
 /* get started button */
 #container {
   text-align: center;
@@ -493,29 +580,34 @@ p {
 }
 
 
+/* Primary CTA in the closing Pandora's-box panel. Was Arial at font-size:
+   xx-large with a stray padding-bottom: 13% the padding shorthand already
+   overrode; now Poppins like the rest of the site, and the gradient matches
+   #grad in the hero so both Get Started buttons read as the same action. */
 .btn {
-  padding-bottom: 13%;
-  margin-bottom: 21vh;
-  padding: 15px 28px;
-  border-radius: 16px;
-  font-size: xx-large;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
+  padding: 15px 34px;
+  border-radius: 12px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
   cursor: pointer;
   color: #fff;
-  background-image: linear-gradient(241deg, #189FFD, #AE63E8);
-  border: none;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+  background-image: linear-gradient(135deg, #8051ff, #ea16ea);
+  border: 1px solid transparent;
+  box-shadow: 0 6px 20px #8051ff4d;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease,
+              background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .btn:hover {
-  transform: translateY(-3px) scale(1.06);
-  box-shadow: 0 12px 30px #189ffd59;
-  filter: brightness(110%);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px #ea16ea66;
+  filter: brightness(108%);
 }
 
 .btn:active {
-  transform: translateY(-1px) scale(1.02);
+  transform: translateY(0);
 }
 
 .btna {
@@ -579,9 +671,12 @@ html {
   
   .test {
     gap: 50px;
+    /* the -8vh cancels the extra top padding, so the gradient band starts 8vh
+       higher up the page while the heading and cards stay where they were */
+    margin-top: -8vh;
     margin-bottom: 100px;
-    padding-block: 9vh;
-    background-image: linear-gradient(180deg, #00000000 0%, #0a0813 14%, #0a0813 86%, #00000000 100%);
+    padding-block: 17vh 9vh;
+    background-image: linear-gradient(180deg, #00000000 0%, #0a0813 8%, #0a0813 88%, #00000000 100%);
   }
 
   /* Your existing styles */
@@ -610,7 +705,7 @@ html {
       width: 110px;
     }
 
-    #yoop, #prod, #prog, #te, #cont {
+    #yoop, #prod, #prog, #imp, #te, #cont {
       padding: 14px 10px;
       margin-top: 8px;
       margin-bottom: 12px;
@@ -660,28 +755,37 @@ html {
       padding-top: 16vh;
     }
  
+    /* the phone sizes below total 380px; the 1.5vw desktop gap pushed that
+       past a 390px viewport, so the outer two circles spilled off both edges */
+    #dbi {
+      gap: 0;
+    }
+
+    /* sizes come from the proportional base rule (22% each) so they fit any
+       phone width; these were fixed px totalling 380px and spilled below 390px */
+    /* the original phone offsets, restored alongside the desktop scatter */
     #dreambigimg4 {
-      height: 80px; 
-      width: 80px; 
-      transform: translate(0, -40px)
+      transform: translateY(-40px);
     }
-    
+
     #dreambigimg3 {
-      height: 110px; 
-      width: 110px; 
-      transform: translate(0, -5px)
+      transform: translateY(-5px);
     }
-    
+
     #dreambigimg2 {
-      height: 100px; 
-      width: 100px; 
-      transform: translate(0, 50px)
+      transform: translateY(50px);
     }
-    
+
     #dreambigimg5 {
-      height: 90px; 
-      width: 90px; 
-      transform: translate(0, -37px)
+      transform: translateY(-37px);
+    }
+
+    /* Phone circles are 22% of the viewport - about 86px on a 390px screen -
+       and the largest offset is 50px, so the art reaches 93px either side of
+       centre. 380px leaves ~97px of clearance, which is why nothing spills
+       into the Guides section below any more. */
+    #about {
+      min-height: 380px;
     }
     
     /* ppl */
@@ -701,22 +805,27 @@ html {
       height: auto
     } */
 
-    /* the desktop art is a 4500px square pulled up by translateY(-35vh);
-       on phones anchor it to the top of #contact instead so it fills the
-       black space behind the copy rather than being hidden */
-    #ppl {
-      top: 0;
-      left: 50%;
-      width: 150vw;
-      justify-content: center;
-      transform: translateX(-50%);
-    }
-
+    /* the art covers the section at every size now (see the base rule), so the
+       phone only needs the lighter wash — the 150vw square it used to use was
+       taller than the section and spilled into the testimonials below */
+    /* Drive the collage from its width, not object-fit's shorter side, so it is
+       always at least as wide as the copy (which is 100% minus 24px padding
+       either side). height: auto keeps the 4500x4500 square square. */
+    /* 122% rather than 100%: the collage is square, so the only way to gain
+       height is to gain width. overflow:hidden trims ~11% off each side, which
+       is invisible on a 30%-opacity backdrop and buys 22% more height. */
     #pplimg {
-      width: 100%;
+      width: 122%;
+      min-width: 122%;
+      max-width: none;
       height: auto;
       opacity: 30%;
-      transform: none;
+    }
+
+    #ppl {
+      inset: 0;
+      align-items: center;
+      justify-content: center;
     }
 
     /* button stuff */
@@ -725,8 +834,11 @@ html {
       padding-bottom: 12vh;
     }
 
+    /* was a hard 350px, which is wider than the CTA panel's inner width on
+       phones 375px and under, so the heading pushed out through the padding */
     .bsm, #bsbg {
-      width: 350px;
+      width: 100%;
+      max-width: 350px;
     }
 
     /* stop fixed-width rows overflowing the viewport */
@@ -735,10 +847,15 @@ html {
       flex-wrap: wrap;
     }
 
-    #aa, #es, #b, #c {
+    .card-container a {
       width: 47%;
-      height: auto;
       margin-bottom: 6vh;
+    }
+
+    #aa, #es, #b, #c {
+      width: 100%;
+      height: auto;
+      margin-bottom: 0;
     }
 
     .testone, .testtwo, .testthree {
@@ -793,21 +910,21 @@ html {
   }
 
   @media only screen and (min-width: 769px) and (max-width: 1439px) {
-    #ppl {
-      width: 100%;
-    }
-
     #pplimg {
       width: 100%;
-      height: auto;
+      height: 100%;
     }
 
     .card-container {
       padding-inline: 24px;
     }
 
-    #aa, #es, #b, #c {
+    .card-container a {
       width: 23%;
+    }
+
+    #aa, #es, #b, #c {
+      width: 100%;
       height: auto;
     }
 
@@ -829,17 +946,311 @@ html {
 
 /* users who ask for less motion get the colour changes without the movement */
 @media (prefers-reduced-motion: reduce) {
-  #yoop, #prod, #prog, #te, #cont,
+  #yoop, #prod, #prog, #imp, #te, #cont,
   .hero-cta, .btn,
   #aa, #es, #b, #c,
   #tone, #ttwo, #tthree, #tfour, #tfive, #tsix {
     transition: none;
   }
 
-  #yoop:hover, #prod:hover, #prog:hover, #te:hover, #cont:hover,
+  #yoop:hover, #prod:hover, #prog:hover, #imp:hover, #te:hover, #cont:hover,
   #grad:hover, .hero-cta-secondary:hover, .btn:hover,
   #aa:hover, #es:hover, #b:hover, #c:hover,
   #tone:hover, #ttwo:hover, #tthree:hover, #tfour:hover, #tfive:hover, #tsix:hover {
     transform: none !important;
+  }
+}
+
+
+/* Programs nav dropdown — links straight to each bootcamp page.
+   .navdrop carries the nav button's vertical margins so the menu can sit flush
+   under the button with no hover gap. Do not move them back onto #prog, and do
+   not drop align-self: flex-start — .head stretches its items otherwise, which
+   would push the menu to the bottom of the whole nav bar. */
+.navdrop {
+  position: relative;
+  display: inline-flex;
+  align-self: flex-start;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.navdrop #prog {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.navmenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 240px;
+  padding: 8px 0;
+  background-color: #0a0a0a;
+  border: 1px solid #262626;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px #000000a6;
+  z-index: 999;
+}
+
+.navdrop:hover .navmenu,
+.navdrop:focus-within .navmenu {
+  display: block;
+}
+
+.navmenu a {
+  display: block;
+  padding: 10px 18px;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 95%;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.navmenu a:hover {
+  background-color: #1c1c1c;
+}
+
+@media only screen and (max-width: 768px) {
+  .navdrop {
+    margin-top: 8px;
+    margin-bottom: 12px;
+  }
+
+  /* touch devices have no hover; the Programs page already lists every bootcamp */
+  .navdrop:hover .navmenu,
+  .navdrop:focus-within .navmenu {
+    display: none;
+  }
+}
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+  .btn.btnsecondary {
+    padding: 11px 20px;
+    font-size: 15px;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  /* Give the hero a full screen of its own so Dream Big always starts below
+     the fold. A fixed margin on #about could not do this reliably — the hero's
+     height changes with how the nav wraps — so the hero claims the height and
+     #about only needs a small gap after it. */
+  .heroblock {
+    min-height: 82vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #about {
+    margin-top: 12vh;
+    padding-block: 40px;
+  }
+
+  /* the collage is width-limited on a phone, so the tall desktop section would
+     just be empty space */
+  /* tall enough to hold a full-width square collage without overflow:hidden
+     clipping it; 108vw covers the square plus breathing room */
+  #contact {
+    min-height: max(76vh, 130vw);
+  }
+}
+
+
+/* Secondary CTA beside it. Doubled class so it can outrank .btn's gradient
+   and shadow without !important. */
+.btn.btnsecondary {
+  color: #fff;
+  background-image: none;
+  background-color: #ffffff0f;
+  border-color: #ffffff40;
+  box-shadow: none;
+}
+
+.btn.btnsecondary:hover {
+  background-color: #ffffff1f;
+  border-color: #ffffff8c;
+  box-shadow: none;
+  filter: none;
+}
+
+#thingy #container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding-block: 5vh 8vh;
+}
+
+@media only screen and (max-width: 768px) {
+  #thingy #container {
+    flex-direction: column;
+    gap: 12px;
+    padding-block: 4vh 6vh;
+  }
+
+  .btn {
+    padding: 14px 26px;
+    font-size: 16px;
+  }
+}
+
+
+/* Backdrop tying the Guides heading, blurb and the four covers into one band.
+   Painted on ::before behind the content rather than on the section itself, so
+   the covers keep their own drop shadows. isolation: isolate keeps the -1
+   z-index inside this section instead of sliding under the page background. */
+.guidesband {
+  position: relative;
+  isolation: isolate;
+  /* carries the band on past the guide covers rather than ending level with
+     them, so the bottom fade happens in empty space */
+  padding-bottom: 16vh;
+}
+
+.guidesband::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    /* Purple bloom. Ten stops rather than five - the previous version had to
+       cover ~22% of the height per stop, which is what read as a sudden jump. */
+    radial-gradient(ellipse 108% 94% at 50% 46%,
+      #4a1f8c40 0%,
+      #4a1f8c39 14%,
+      #4a1f8c30 27%,
+      #4a1f8c26 39%,
+      #4a1f8c1c 50%,
+      #4a1f8c14 61%,
+      #4a1f8c0d 72%,
+      #4a1f8c07 82%,
+      #4a1f8c03 91%,
+      #4a1f8c00 100%),
+    /* The band, ramped over twenty-two stops so the fade in and out is
+       continuous rather than stepping between a handful of alpha values. */
+    linear-gradient(180deg,
+      #00000000 0%,
+      #0b08161a 3%,
+      #0b081633 6%,
+      #0b08164d 10%,
+      #0b081666 14%,
+      #0b081680 18%,
+      #0b081699 23%,
+      #0b0816b3 28%,
+      #0b0816cc 33%,
+      #0b0816e6 39%,
+      #0b0816 46%,
+      #0b0816 62%,
+      #0b0816e6 70%,
+      #0b0816cc 76%,
+      #0b0816b3 81%,
+      #0b081699 85%,
+      #0b081680 89%,
+      #0b081666 92%,
+      #0b08164d 95%,
+      #0b081633 97%,
+      #0b08161a 99%,
+      #00000000 100%);
+}
+
+/* a faint hairline under the covers to close the band off */
+.guidesband::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: min(70%, 900px);
+  height: 1px;
+  background-image: linear-gradient(90deg, #ffffff00 0%, #ffffff26 50%, #ffffff00 100%);
+}
+
+@media only screen and (max-width: 768px) {
+  .guidesband::before {
+    background-image:
+      radial-gradient(ellipse 160% 70% at 50% 44%,
+        #4a1f8c40 0%,
+        #4a1f8c38 15%,
+        #4a1f8c2b 30%,
+        #4a1f8c1f 44%,
+        #4a1f8c15 57%,
+        #4a1f8c0c 70%,
+        #4a1f8c05 84%,
+        #4a1f8c00 100%),
+      linear-gradient(180deg,
+        #00000000 0%,
+        #0b08161a 3%,
+        #0b081640 7%,
+        #0b081666 11%,
+        #0b081699 17%,
+        #0b0816cc 24%,
+        #0b0816 32%,
+        #0b0816 70%,
+        #0b0816cc 79%,
+        #0b081699 86%,
+        #0b081640 93%,
+        #0b08161a 97%,
+        #00000000 100%);
+  }
+
+  .guidesband {
+    padding-bottom: 10vh;
+  }
+
+  .guides-heading {
+    font-size: 34px;
+  }
+}
+
+
+/* Keyboard focus. Only two :focus-visible rules existed across the whole site,
+   so tabbing through the nav, the cards or most buttons gave no visible
+   position. The dark ring sits outside the white one so the indicator stays
+   legible on light surfaces too (the USAPhO card, the Learn More buttons).
+   :focus-visible, not :focus, so mouse clicks do not draw it. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 5px #000000a6;
+}
+
+/* the nav buttons already move on hover; matching that on focus keeps the two
+   states consistent for keyboard and mouse */
+#yoop:focus-visible,
+#prod:focus-visible,
+#prog:focus-visible,
+#imp:focus-visible,
+#te:focus-visible,
+#cont:focus-visible {
+  border-bottom-color: #ffffff;
+}
+
+/* the dropdown opens on focus-within already; this makes the focused entry
+   inside it obvious */
+.navmenu a:focus-visible {
+  background-color: #1c1c1c;
+  outline-offset: -2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  a:focus-visible,
+  button:focus-visible {
+    transition: none;
   }
 }
