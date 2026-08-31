@@ -145,6 +145,12 @@ h1 {
 .bottomprof img {
   width: 127px;
   height: 127px;
+  /* Without object-fit a non-square photo is squashed to fit this box rather
+     than cropped to it. 29 of the 82 portraits are off square - arjunkrish is
+     525x700, which was being compressed 25% horizontally. object-position is
+     spelled out so it is easy to bias upward if a face sits high in frame. */
+  object-fit: cover;
+  object-position: center;
   border-radius: 50%;
   margin-right: 40px
 }
